@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>BEAT SOMEONE</title>
+  <!--Import-->
+  <script type="text/javascript" src="../../js/jquery-3.6.0.js"></script>
+  <script type="text/javascript" src="../../js/common.js"></script>
+  <script defer type="text/javascript" src="../../js/detail_page.js"></script>
+
+  <!-- link -->
+  <link rel="stylesheet" href="../../css/reset.css" />
+  <link rel="stylesheet" href="../../css/common.css" />
+  <link rel="stylesheet" href="../../css/header_footer.css">
+  <link rel="stylesheet" href="../../css/detail_page.css" />
+  <link rel="stylesheet" href="../../css/modal.css" />
+  <!-- favicon -->
+  <link rel="icon" href="../../images/icon/favicon.ico">
+</head>
+
+<body>
+
+  <!-- 음원제작의뢰 상세페이지 -->
+
+  <div id="wrap">
+
+    <!-- 음원 등록하기 모달 -->
+    <div class="modal_wrap form_modal music_upload_modal" style="display: block;">
+      <div class="modal_box">
+        <button class="x_btn close_btn"></button>
+        <div class="title">음원 등록하기</div>
+        <div class="content_wrap">
+          <!-- 업로드 전 -->
+          <div class="upload_box error">
+            <div class="upload_btn">
+              <label for="music_upload" class="basic_btn_black_border">음원 파일 선택</label>
+              <input type="file" name="" id="music_upload">
+            </div>
+            <p>혹은 음원 파일을 여기로 끌어 놓으세요!</p>
+          </div>
+
+          <!-- 업로드 후 -->
+          <div class="upload_box">
+            <ul class="file_list">
+              <li>
+                file.mp3
+                <button type="button" class="delete_btn">삭제버튼</button>
+              </li>
+              <li>
+                file.mp3
+                <button type="button" class="delete_btn">삭제버튼</button>
+              </li>
+              <li>
+                file.mp3
+                <button type="button" class="delete_btn">삭제버튼</button>
+              </li>
+              <li>
+                file.mp3
+                <button type="button" class="delete_btn">삭제버튼</button>
+              </li>
+              <li>
+                file.mp3
+                <button type="button" class="delete_btn">삭제버튼</button>
+              </li>
+              <li>
+                file.mp3
+                <button type="button" class="delete_btn">삭제버튼</button>
+              </li>
+              <li>
+                file.mp3
+                <button type="button" class="delete_btn">삭제버튼</button>
+              </li>
+            </ul>
+          </div>
+
+          <p class="error_txt">* 음원 파일은 MP3, WAV 확장자 파일만 등록이 가능합니다.</p>
+          <p class="error_txt">* 음원은 1회 등록 시 최대 5개까지 등록 가능합니다. </p>
+          <p class="error_txt">* 첨부파일은 1개당 10MB 이내로 등록 가능합니다. 첨부파일의 용량을 확인해주세요.</p>
+
+          <ul class="guide_list">
+            <li class="guide_txt">* 음원 파일은 MP3, WAV 확장자 파일만 등록이 가능합니다.</li>
+            <li class="guide_txt">* 최대 5개까지 등록이 가능하며 파일 당 10MB까지 등록이 가능합니다.</li>
+            <li class="guide_txt">* Drag & Drop으로 음원을 직접 등록할 수 있습니다.</li>
+            <li class="guide_txt">* 구매자와 앨범을 공유하면서 발생되는 개인적인 비용이나 손해에 대한 책임은 본인에게 있습니다.</li>
+          </ul>
+          <div class="button_wrap full">
+            <button type="button" class="basic_btn_black">Bybeats에서 가져오기</button>
+          </div>
+          <p class="guide_txt">* BY BEATS에 등록된 음원이 있다면, 계정 연동 후 파일 등록이 가능합니다.</p>
+        </div>
+
+        <div class="button_wrap full">
+          <!-- 입력전엔 disabled 비활성화 처리 -->
+          <button type="button" class="basic_btn_red confirm_btn">다음</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 판매 금액 결정 모달 -->
+    <div class="modal_wrap form_modal price_setting_modal" style="display: block;">
+      <div class="modal_box">
+        <button class="x_btn close_btn"></button>
+        <div class="title">판매 금액 설정</div>
+        <div class="content_wrap">
+
+          <ul class="file_list">
+            <li>
+              <p class="file_name">1. <span>file.mp3</span></p>
+              <div class="input_area">
+                <div class="input_wrap">
+                  <input type="text" placeholder="판매 금액 입력">
+                </div>
+                <div class="select_box_wrap">
+                  <button class="select_title">&#8361</button>
+                  <ul>
+                    <li class="select_list">&#8361</li>
+                    <li class="select_list">$</li>
+                    <li class="select_list">¥</li>
+                    <li class="select_list">¥</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <p class="file_name">2. <span>file.mp3</span></p>
+              <div class="input_area">
+                <div class="input_wrap">
+                  <input type="text" placeholder="판매 금액 입력">
+                </div>
+                <div class="select_box_wrap">
+                  <button class="select_title">&#8361</button>
+                  <ul>
+                    <li class="select_list">&#8361</li>
+                    <li class="select_list">$</li>
+                    <li class="select_list">¥</li>
+                    <li class="select_list">¥</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <p class="guide_txt">* 선택한 음원에 대한 회폐 단위와 판매 금액을 입력해주세요.</p>
+        </div>
+
+        <!-- 입력전엔 disabled 비활성화 처리 -->
+        <div class="button_wrap full">
+          <button type="button" class="basic_btn_red confirm_btn">완료</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 파일등록 완료 모달창 -->
+    <div class="modal_wrap message_modal">
+      <div class="modal_box done">
+        <button class="x_btn close_btn"></button>
+        <p class="comment">
+          음원 파일 등록을 완료했습니다. 의뢰자 확인 후 <br>
+          선택된 음원에 대한 결제가 진행될 예정입니다. <br>
+          해당 의뢰의 마감일은 <span>yyyy.mm.dd</span> 입니다.
+        </p>
+        <div class="button_wrap">
+          <button type="button" class="basic_btn_red confirm_btn close_btn">
+            확인
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 음원 철회 모달 -->
+    <div class="modal_wrap message_modal">
+      <div class="modal_box question">
+        <button class="x_btn close_btn"></button>
+        <p class="comment">
+          해당 음원 등록을 철회 하시겠습니까?
+        </p>
+        <div class="button_wrap">
+          <button type="button" class="basic_btn_red_border cancel_btn close_btn">
+            아니오
+          </button>
+          <button type="button" class="basic_btn_red confirm_btn close_btn">
+            네
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 음원 철회 완료 모달 -->
+    <div class="modal_wrap message_modal">
+      <div class="modal_box done">
+        <button class="x_btn close_btn"></button>
+        <p class="comment">
+          음원 등록 철회가 완료되었습니다.
+        </p>
+        <div class="button_wrap">
+          <button type="button" class="basic_btn_red confirm_btn close_btn">
+            확인
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 컨텐츠 삭제 모달 -->
+    <div class="modal_wrap message_modal">
+      <div class="modal_box question">
+        <button class="x_btn close_btn"></button>
+        <p class="comment">
+          해당 컨텐츠를 삭제하시겠습니까?
+        </p>
+        <div class="button_wrap">
+          <button type="button" class="basic_btn_red_border cancel_btn close_btn">
+            아니오
+          </button>
+          <button type="button" class="basic_btn_red confirm_btn close_btn">
+            네
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 컨텐츠 삭제 완료 모달 -->
+    <div class="modal_wrap message_modal">
+      <div class="modal_box done">
+        <button class="x_btn close_btn"></button>
+        <p class="comment">
+          컨텐츠 삭제가 완료되었습니다.
+        </p>
+        <div class="button_wrap">
+          <button type="button" class="basic_btn_red confirm_btn close_btn">
+            확인
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 헤더 -->
+    <!-- 흰색 헤더는 클래스 white 추가 -->
+    <header class="header_pc">
+      <div class="header_top">
+        <div class="inner">
+          <div class="tabs">
+            <a href="" class="tab">
+              <img src="../../images/icon/icon_bybeats_logotext.svg" alt="바이비츠 로고">
+            </a>
+            <a href="" class="tab active">
+              <img src="../../images/icon/icon_beatsomeone_logotext.svg" alt="비트썸원 로고">
+            </a>
+          </div>
+          <div class="right_side">
+            <div class="search_wrap">
+              <input type="text" placeholder="검색어를 입력해주세요." />
+              <button class="search_btn" onclick="location.href='../search/search.html'"></button>
+            </div>
+            <div class="language_wrap">
+              <button class="language_btn">Language</button>
+              <ul class="language_list">
+                <li class="active">한국어</li>
+                <li>English</li>
+                <li>日本</li>
+                <li>中文</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header_bottom">
+        <div class="inner">
+          <div class="left_side">
+            <h1 class="logo">
+              <a href="../index.html" class="link"></a>
+            </h1>
+            <ul class="gnb">
+              <li class="list hasSec">
+                <a href="#" onclick="return false;" class="link">
+                  피드
+                  <div class="bubble_box">
+                    <div class="rolling">
+                      <ul class="depth">
+                        <li class="list">자작곡</li>
+                        <li class="list">커버곡</li>
+                        <li class="list">일상</li>
+                      </ul>
+                    </div>
+                  </div>
+                </a>
+                <ul class="sec_depth">
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      전체
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      자작곡
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      커버곡
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      일상
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="list">
+                <a href="../music_production_request/music_production_request_list.html" class="link">
+                  음원제작 의뢰
+                </a>
+              </li>
+              <li class="list hasSec">
+                <a href="#" onclick="return false;" class="link">
+                  질문/답변
+                </a>
+                <ul class="sec_depth">
+                  <li class="list">
+                    <a href="../question_answer/question_list.html" class="link">
+                      질문/답변
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../question_answer/best_answer.html" class="link">
+                      명예의 전당
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="list">
+                <a href="../trend/trend_list.html" class="link">
+                  트렌드
+                </a>
+              </li>
+              <li class="list">
+                <a href="../review/prd_list.html" class="link">
+                  제품 리뷰
+                </a>
+              </li>
+              <li class="list">
+                <a href="../mypage/event.html" class="link">
+                  이벤트
+                </a>
+              </li>
+              <li class="list">
+                <a href="../common/notice_list.html" class="link">
+                  공지사항
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="right_side">
+            <!-- <ul class="user">
+                      <li class="list sign_in">
+                          <a href="#" onclick='return false' class="link">
+                              로그인
+                          </a>
+                      </li>
+                      <li class="list sign_up">
+                          <a href="#" onclick='return false' class="link">
+                              회원가입
+                          </a>
+                      </li>
+                  </ul> -->
+            <div class="user_nav">
+              <div class="img_box"></div>
+              <span class="user_name">NickName</span>
+              <ul class="user_menu">
+                <li class="list">
+                  <a href="../mypage/my_request_song.html" class="link">
+                    마이페이지
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="../mypage/info_change.html" class="link">
+                    개인정보 관리
+                  </a>
+                </li>
+                <li class="list logout">
+                  <a href="#" onclick="return false" class="link">
+                    로그아웃
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 하단 네비 -->
+    <ul class="bottom_nav">
+      <li class="list home active">
+        <a href="../index.html" class="link">
+          <div class="icon_box"></div>
+          <span>홈</span>
+        </a>
+      </li>
+      <li class="list communication">
+        <a href="#" onclick="return false;" class="link">
+          <div class="icon_box"></div>
+          <span>커뮤니티</span>
+        </a>
+      </li>
+      <li class="list event">
+        <a href="../mypage/event.html" class="link">
+          <div class="icon_box"></div>
+          <span>이벤트</span>
+        </a>
+      </li>
+      <li class="list mypage">
+        <a href="../mypage/my_request_song.html" class="link">
+          <div class="icon_box"></div>
+          <span>마이페이지</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- 모바일 헤더 -->
+    <header class="header_mb detail_header">
+      <div class="inner">
+        <a href="javascript:history.back();" class="goBack_btn"></a>
+        <h1 class="logo">
+          <a href="../index.html" class="link"></a>
+        </h1>
+        <div class="hamburger">
+          <div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="page_title">
+          음원제작 의뢰
+        </div>
+      </div>
+      <div class="side_menu">
+        <div class="opacity_effect">
+          <div class="top_area">
+            <div class="language_wrap">
+              <button class="language_btn">
+                Language
+              </button>
+              <ul class="language_list">
+                <li class="active">
+                  한국어
+                </li>
+                <li>
+                  English
+                </li>
+                <li>
+                  日本
+                </li>
+                <li>
+                  中文
+                </li>
+              </ul>
+            </div>
+            <a href="../search/search.html" class="link search_btn"></a>
+          </div>
+          <div class="link_wrap">
+            <a href="#" onclick="return false;" class="link">
+              BEAT SOMEONE
+            </a>
+            <a href="#" onclick="return false;" class="link">
+              BYBEATS
+            </a>
+          </div>
+          <!-- 로그인전 -->
+          <!-- <div class="sign_inup">
+                <a href="#" onclick="return false;" class="link">
+                    로그인
+                </a>
+                <a href="#" onclick="return false;" class="link">
+                    회원가입
+                </a>
+            </div> -->
+          <!-- 로그인 후 -->
+          <div class="profile_box">
+            <div class="img_box">
+              <img src="../../images/icon/icon_user-circle.svg" alt="">
+            </div>
+            <div class="text_area">
+              <p class="nickname">
+                NICKNAME
+              </p>
+              <a href="../mypage/my_request_song.html" class="info_btn">
+                김비트님
+              </a>
+            </div>
+          </div>
+          <ul class="accordion">
+            <li class="list">
+              <div>
+                <div class="title main_link">
+                  피드
+                </div>
+                <ul class="sec_depth">
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link active">
+                      - 전체
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      - 자작곡
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      - 커버곡
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      - 일상
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="list">
+              <a href="../music_production_request/music_production_request_list.html" class="link main_link">
+                음원제작 의뢰
+              </a>
+            </li>
+            <li class="list">
+              <div>
+                <div class="title main_link">
+                  질문/답변
+                </div>
+                <ul class="sec_depth">
+                  <li class="list">
+                    <a href="../question_answer/question_list.html" class="link active">
+                      - 질문/답변
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../question_answer/question_list.html" class="link">
+                      - 명예의 전당
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="list">
+              <a href="../trend/trend_list.html" class="link main_link">
+                트렌드
+              </a>
+            </li>
+            <li class="list">
+              <a href="../review/prd_list.html" class="link main_link">
+                제품 리뷰
+              </a>
+            </li>
+            <li class="list">
+              <a href="../mypage/event.html" class="link main_link">
+                이벤트
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" onclick="return false;" class="link main_link">
+                공지사항
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="side_bg"></div>
+    </header>
+
+    <section id="wrap_content" class="detail_page request_detail">
+      <div class="wrap_inner">
+        <div class="title_area">
+          <div class="inner">
+            <div class="state_area">
+              <p class="state_badge line_badge">의뢰구분</p>
+              <p class="state_badge red_badge">진행중</p>
+              <p class="state_badge black_badge">심사중</p>
+              <p class="state_badge gray_badge">종료</p>
+            </div>
+            <h2 class="title_name">의뢰 컨텐츠 제목 표기 영역으로 사용됩니다.</h2>
+          </div>
+        </div>
+        <div class="top_area">
+          <div class="inner">
+            <div class="profile_box">
+              <div class="profile_img">
+                <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+              </div>
+              <div>
+                <p class="nickname">사용자 닉네임 표시</p>
+                <p class="gray_text">13시간 전</p>
+              </div>
+            </div>
+            <div class="share_wrap">
+              <button type="button" class="share_btn"><span>공유하기</span></button>
+
+              <!-- 공유하기 버튼 클릭시 나오는 박스 -->
+              <div class="share_box">
+                <button type="button">
+                  <img src="../../images/icon/signUp_facebook.svg" alt="페이스북 로고">
+                </button>
+                <button type="button">
+                  <img src="../../images/icon/signUp_kakao.svg" alt="카카오톡 로고">
+                </button>
+                <button type="button">
+                  <img src="../../images/icon/signUp_naver.svg" alt="네이버 로고">
+                </button>
+                <button type="button">
+                  <img src="../../images/icon/icon_insta_color.svg" alt="인스타그램 로고">
+                </button>
+                <button type="button">
+                  <img src="../../images/icon/icon_link_share.svg" alt="클립보드 복사 아이콘">
+                </button>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content_area">
+          <div class="inner">
+            <div class="info_area">
+              <div class="info_list">
+                <dl>
+                  <dt>의뢰 비용 :</dt>
+                  <dd>20,000 &#8361</dd>
+                </dl>
+                <dl>
+                  <dt>의뢰 기간 :</dt>
+                  <dd>~2022.01.02 10:00 (D-90)</dd>
+                  <!-- 심사중, 종료된 의뢰-->
+                  <!-- <dd class="end_txt">2022.01.02 10:00 (D-90)</dd> -->
+                </dl>
+                <button type="button" class="big_btn music_add_btn">음원 등록하기</button>
+                <!-- 등록 마감시 버튼 -->
+                <!-- <button type="button" class="big_btn music_add_btn" disabled>음원 등록하기</button> -->  
+                <dl>
+                  <dt>곡 등록 유의사항 :</dt>
+                  <dd class="list_dd">
+                    <p>* 의뢰 내용을 확인하신 후 요청에 맞는 곡을 등록해주세요.</p>
+                    <p>* 등록한 곡은 의뢰자만 열람이 가능합니다.</p>
+                    <p>* 의뢰자가 등록한 곡을 선택, 결제하면 곡의 소유권은 의뢰자에게 양도됩니다.</p>
+                    <p>* 판매자와 앨범을 공유하면서 발생되는 개인적인 비용이나 손해에 대한 책임은 본인에게 있습니다.</p>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+
+            <!-- 음원 등록 후 -->
+            <div class="music_list">
+              <div class="list_head">
+                <div class="col_1">No.</div>
+                <div class="col_2">제목</div>
+                <div class="col_3">재생시간</div>
+                <div class="col_4">등록일</div>
+                <div class="col_5">금액</div>
+                <div class="col_6">상태</div>
+              </div>
+              <ul class="list_body">
+                <li>
+                  <div class="list">
+                    <div class="col_1">01.</div>
+                    <div class="col_2">
+                      <button type="button" class="play_btn">재생버튼</button>
+                      영역 내 등록된 음원의 제목 표기
+                    </div>
+                    <div class="col_3">4:17</div>
+                    <div class="col_4" data-subtitle="등록일 :">2022.12.12</div>
+                    <div class="col_5" data-subtitle="금액 :">900,000,000 (원)</div>
+                    <div class="col_6">
+                      <button type="button" class="common_btn cancel_btn">등록 철회</button>
+                    </div>
+                  </div>
+                  <div class="music_bar_box">
+                    <div class="sound_bar">
+                      <img src="../../images/dummy/sound_img_2.png" alt="뮤직바">
+                      <div class="moving_bar"></div>
+                    </div>
+                    <div class="btn_group">
+                      <button type="button" class="btn prev">이전버튼</button>
+                      <button type="button" class="btn play">재생버튼</button>
+                      <button type="button" class="btn next">다음버튼</button>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="list">
+                    <div class="col_1">02.</div>
+                    <div class="col_2">
+                      <button type="button" class="play_btn stop">재생버튼</button>
+                      영역 내 등록된 음원의 제목 표기
+                    </div>
+                    <div class="col_3">4:17</div>
+                    <div class="col_4" data-subtitle="등록일 :">2022.12.12</div>
+                    <div class="col_5" data-subtitle="금액 :">900,000,000 (원)</div>
+                    <div class="col_6">
+                      <button type="button" class="common_btn cancel_btn">등록 철회</button>
+                    </div>
+                  </div>
+                  <div class="music_bar_box">
+                    <div class="sound_bar">
+                      <img src="../../images/dummy/sound_img_2.png" alt="뮤직바">
+                      <div class="moving_bar"></div>
+                    </div>
+                    <div class="btn_group">
+                      <button type="button" class="btn prev">이전버튼</button>
+                      <button type="button" class="btn play stop">재생버튼</button>
+                      <button type="button" class="btn next">다음버튼</button>
+                    </div>
+                  </div>
+                </li>
+                <!-- 심사중 일 때 -->
+                <li>
+                  <div class="list">
+                    <div class="col_1">02.</div>
+                    <div class="col_2">
+                      <button type="button" class="play_btn stop">재생버튼</button>
+                      영역 내 등록된 음원의 제목 표기
+                    </div>
+                    <div class="col_3">4:17</div>
+                    <div class="col_4" data-subtitle="등록일 :">2022.12.12</div>
+                    <div class="col_5" data-subtitle="금액 :">900,000,000 (원)</div>
+                    <div class="col_6">
+                      <span class="state_box">심사중</span>
+                    </div>
+                  </div>
+                  <div class="music_bar_box">
+                    <div class="sound_bar">
+                      <img src="../../images/dummy/sound_img_2.png" alt="뮤직바">
+                      <div class="moving_bar"></div>
+                    </div>
+                    <div class="btn_group">
+                      <button type="button" class="btn prev">이전버튼</button>
+                      <button type="button" class="btn play stop">재생버튼</button>
+                      <button type="button" class="btn next">다음버튼</button>
+                    </div>
+                  </div>
+                </li>
+                <!-- 판매 완료 시 -->
+                <li>
+                  <div class="list">
+                    <div class="col_1">02.</div>
+                    <div class="col_2">
+                      <button type="button" class="play_btn stop">재생버튼</button>
+                      영역 내 등록된 음원의 제목 표기
+                    </div>
+                    <div class="col_3">4:17</div>
+                    <div class="col_4" data-subtitle="등록일 :">2022.12.12</div>
+                    <div class="col_5" data-subtitle="금액 :">900,000,000 (원)</div>
+                    <div class="col_6 red_txt">
+                      <span class="state_box complete">판매완료</span>
+                    </div>
+                  </div>
+                  <div class="music_bar_box">
+                    <div class="sound_bar">
+                      <img src="../../images/dummy/sound_img_2.png" alt="뮤직바">
+                      <div class="moving_bar"></div>
+                    </div>
+                    <div class="btn_group">
+                      <button type="button" class="btn prev">이전버튼</button>
+                      <button type="button" class="btn play stop">재생버튼</button>
+                      <button type="button" class="btn next">다음버튼</button>
+                    </div>
+                  </div>
+                </li>
+                <!-- 판매 종료시 -->
+                <li>
+                  <div class="list">
+                    <div class="col_1">02.</div>
+                    <div class="col_2">
+                      <button type="button" class="play_btn stop">재생버튼</button>
+                      영역 내 등록된 음원의 제목 표기
+                    </div>
+                    <div class="col_3">4:17</div>
+                    <div class="col_4" data-subtitle="등록일 :">2022.12.12</div>
+                    <div class="col_5" data-subtitle="금액 :">900,000,000 (원)</div>
+                    <div class="col_6">
+                      <span class="state_box">종료</span>
+                    </div>
+                  </div>
+                  <div class="music_bar_box">
+                    <div class="sound_bar">
+                      <img src="../../images/dummy/sound_img_2.png" alt="뮤직바">
+                      <div class="moving_bar"></div>
+                    </div>
+                    <div class="btn_group">
+                      <button type="button" class="btn prev">이전버튼</button>
+                      <button type="button" class="btn play stop">재생버튼</button>
+                      <button type="button" class="btn next">다음버튼</button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="desctip_txt">
+                <p>* 자신이 등록한 곡만 확인 가능합니다.</p>
+                <p> * 전체 곡 중의뢰인이 선택한 곡에 대해서만 결제 및 정산이 진행되며, 그 외 곡은 등록 철회합니다.</p>
+              </div>
+            </div>
+
+            <div class="text_box">
+              의뢰 컨텐츠 등록 시 입력한 상세 내용 중의 일부를 영역내 표기합니다.의뢰 컨텐츠 등록 시 입력한 상세 내용 중의 일부를 영역내 표기합니다.의뢰 컨텐츠 등록 시 입력한 상세 내용 중의 일부를
+              영역내 표기합니다. 의뢰 컨텐츠 등록 시 입력한 상세 내용 중의 일부를 영역내 표기합니다. 의뢰 컨텐츠 등록 시 입력한 상세 내용 중의 일부를 영역내 표기합니다. 의뢰 컨텐츠 등록 시 입력한
+              상세 내용 중의 일부를 영역내 표기합니다...
+            </div>
+          </div>
+        </div>
+        <!-- 페이지네이션 1페이지당 댓글 10개씩 출력 -->
+        <div class="comment_area">
+          <div class="inner">
+            <div class="top_box">
+              <div class="mark_wrap">
+                <div class="profile_wrap mark">
+                  <ul>
+                    <li>
+                      <img src="../../images/dummy/profile_01.jpg" alt="프로필 이미지1" />
+                    </li>
+                    <li>
+                      <img src="../../images/dummy/profile_02.jpg" alt="프로필 이미지1" />
+                    </li>
+                    <li>
+                      <img src="../../images/dummy/profile_03.jpg" alt="프로필 이미지1" />
+                    </li>
+                  </ul>
+                  <span>99+</span>
+                </div>
+              </div>
+              <div class="btn_wrap">
+                <a href="./music_production_request_list.html" class="btn basic_btn_gray list_link">목록</a>
+                <div class="group">
+                  <button type="button" class="btn basic_btn_gray delete">삭제</button>
+                  <button type="button" class="btn basic_btn_black edit">수정</button>
+                </div>
+              </div>
+            </div>
+            <div class="comment_list">
+              <div class="num_text">
+                총 <b>999개</b>의 댓글이 있습니다.
+              </div>
+              <div class="comment_write">
+                <div class="profile_img">
+                  <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                </div>
+                <div class="white_wrap">
+                  <textarea name="" id="" cols="30" rows="10" placeholder="댓글을 입력해주세요."></textarea>
+                  <button type="button">작성</button>
+                </div>
+              </div>
+              <div class="comment_item">
+                <div class="wrapper">
+                  <div class="profile_img">
+                    <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                  </div>
+                  <div class="comment_right">
+                    <div class="top">
+                      <span class="nickname">사용자 닉네임 표시</span>
+                      <p class="time gray_text">13시간 전</p>
+                    </div>
+                    <div class="comment">
+                      댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이
+                      표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.
+                      댓글
+                      내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.
+                    </div>
+                    <div class="bottom">
+                      <button type="button" class="like_toggle_btn active"><span>
+                          9,999
+                        </span></button>
+                      <button type="button" class="gray_text reply_btn">답글달기</button>
+                    </div>
+                    <div class="edit_btn_group">
+                      <div class="edit_group">
+                        <button type="button" class="edit_btn">수정</button>
+                        <button type="button" class="delete_btn">삭제</button>
+                      </div>
+                      <div class="done_group">
+                        <button type="button" class="done_btn">완료</button>
+                        <button type="button" class="cancel_btn">취소</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 답글 달기 -->
+                <div class="comment_write reply">
+                  <div class="profile_img">
+                    <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                  </div>
+                  <div class="white_wrap">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="댓글을 입력해주세요."></textarea>
+                    <button type="button">작성</button>
+                  </div>
+                </div>
+              </div>
+              <div class="comment_item">
+                <div class="wrapper">
+                  <div class="profile_img">
+                    <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                  </div>
+                  <div class="comment_right">
+                    <div class="top">
+                      <span class="nickname">사용자 닉네임 표시</span>
+                      <p class="time gray_text">13시간 전</p>
+                      <button type="button" class="report">신고</button>
+                    </div>
+                    <div class="comment">
+                      댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이
+                      표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.
+                      댓글
+                      내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.
+                    </div>
+                    <div class="bottom">
+                      <button type="button" class="like_toggle_btn"><span>9,999</span> </button>
+                      <button type="button" class="gray_text reply_btn cancel">답글취소</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- 답글 달기 -->
+                <div class="comment_write reply on">
+                  <div class="profile_img">
+                    <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                  </div>
+                  <div class="white_wrap">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="댓글을 입력해주세요."></textarea>
+                    <button type="button">작성</button>
+                  </div>
+                </div>
+              </div>
+              <div class="comment_item">
+                <div class="wrapper">
+                  <div class="profile_img">
+                    <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                  </div>
+                  <div class="comment_right">
+                    <div class="top">
+                      <span class="nickname">사용자 닉네임 표시</span>
+                      <p class="time gray_text">13시간 전</p>
+                      <button type="button" class="report">신고</button>
+                    </div>
+                    <div class="comment">
+                      댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이
+                      표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.
+                      댓글
+                      내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.
+                    </div>
+                    <div class="bottom">
+                      <button type="button" class="like_toggle_btn"><span>
+                          9,999
+                        </span></button>
+                      <button type="button" class="gray_text reply_btn">답글달기</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- 답글 달기 -->
+                <div class="comment_write reply">
+                  <div class="profile_img">
+                    <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                  </div>
+                  <div class="white_wrap">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="댓글을 입력해주세요."></textarea>
+                    <button type="button">작성</button>
+                  </div>
+                </div>
+                <!-- 대댓글 -->
+                <div class="comment_item">
+                  <div class="wrapper">
+                    <div class="profile_img">
+                      <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                    </div>
+                    <div class="comment_right">
+                      <div class="top">
+                        <span class="nickname">사용자 닉네임 표시</span>
+                        <p class="time gray_text">13시간 전</p>
+                        <button type="button" class="report">신고</button>
+                      </div>
+                      <div class="comment">
+                        <p class="user_tag">사용자 닉네임</p>
+                        댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글
+                        내용이
+                        표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이
+                        표기됩니다.
+                        댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.
+                      </div>
+                      <div class="bottom">
+                        <button type="button" class="like_toggle_btn"><span>
+                            9,999
+                          </span></button>
+                        <button type="button" class="gray_text reply_btn cancel">답글취소</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 답글 달기 -->
+                  <div class="comment_write reply on">
+                    <div class="profile_img">
+                      <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                    </div>
+                    <div class="white_wrap">
+                      <textarea name="" id="" cols="30" rows="10" placeholder="댓글을 입력해주세요."></textarea>
+                      <button type="button">작성</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- 대댓글 -->
+                <!-- 수정 버튼을 누르면 edit 클래스 붙여주세요 -->
+                <div class="comment_item edit">
+                  <div class="wrapper">
+                    <div class="profile_img">
+                      <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                    </div>
+                    <div class="comment_right">
+                      <div class="top">
+                        <span class="nickname">사용자 닉네임 표시</span>
+                        <p class="time gray_text">13시간 전</p>
+                        <button type="button" class="report">신고</button>
+                      </div>
+                      <div class="comment">
+                        <p class="user_tag">사용자 닉네임</p>
+                        댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글
+                        내용이
+                        표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이
+                        표기됩니다.
+                        댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.
+                      </div>
+                      <div class="edit_comment">
+                        <p class="user_tag">사용자 닉네임</p>
+                        <textarea name=""
+                          id="">댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.</textarea>
+                      </div>
+                      <div class="bottom">
+                        <button type="button" class="like_toggle_btn"><span>
+                            9,999
+                          </span></button>
+                        <button type="button" class="gray_text reply_btn">답글달기</button>
+                      </div>
+                      <div class="edit_btn_group">
+                        <div class="edit_group">
+                          <button type="button" class="edit_btn">수정</button>
+                          <button type="button" class="delete_btn">삭제</button>
+                        </div>
+                        <div class="done_group">
+                          <button type="button" class="done_btn">완료</button>
+                          <button type="button" class="cancel_btn">취소</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 답글 달기 -->
+                  <div class="comment_write reply">
+                    <div class="profile_img">
+                      <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                    </div>
+                    <div class="white_wrap">
+                      <textarea name="" id="" cols="30" rows="10" placeholder="댓글을 입력해주세요."></textarea>
+                      <button type="button">작성</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 비공개처리 글 private클래스 붙여주세요 -->
+              <div class="comment_item private">
+                <div class="wrapper">
+                  <div class="profile_img">
+                    <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                  </div>
+                  <div class="comment_right">
+                    <div class="top">
+                      <span class="nickname">사용자 닉네임 표시</span>
+                      <p class="time gray_text">13시간 전</p>
+                      <button type="button" class="report">신고</button>
+                    </div>
+                    <div class="comment">
+                      [관리자의 의해 비공개 처리된 댓글입니다.]
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 페이지네이션 -->
+            <div class="pagination_wrap">
+              <button type="button" class="prev_next_btn prev">
+                <img src="../../images/icon/icon_arrow_18px.svg" alt="화살표 아이콘" />
+              </button>
+              <div class="pagination_list">
+                <button type="button" class="active">1</button>
+                <button type="button">2</button>
+                <button type="button">3</button>
+                <button type="button">4</button>
+                <button type="button">5</button>
+                <p>...</p>
+              </div>
+              <button type="button" class="prev_next_btn">
+                <img src="../../images/icon/icon_arrow_18px.svg" alt="화살표 아이콘" />
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+      <div class="inner">
+        <h1 class="logo">
+          <a href="../index.html" class="link"></a>
+        </h1>
+        <div class="right_side">
+          <div class="content_area">
+            <div class="cover">
+              <ul class="foot_gnb">
+                <li class="list">
+                  <a href="#" onclick="return false;" class="link">
+                    About Beat Someone
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" onclick="return false;" class="link">
+                    이용약관
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" onclick="return false;" class="link">
+                    개인정보 취급방침
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" onclick="return false;" class="link">
+                    공지사항
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" onclick="return false;" class="link">
+                    제휴 문의
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <address>
+              <p>
+                본사 : 서울특별시 도봉구 마들로13길 84, 서울창업허브 창동 2층
+                8로(창동, 창동 아우르네)
+              </p>
+              <p>
+                지점&스튜디오 : 서울특별시 마포구 와우산로3길 16,
+                203호~205호(상수동, 석진스토리)
+              </p>
+              <p>
+                대표이사: 김용환&ensp;&ensp;사업자등록번호:
+                112-86-01117&ensp;&ensp;<br class="mobile_layout" />통신판매신고번호: 제2019-서울마포-2779호
+              </p>
+              <p>
+                TEL : 070-4323-0000&ensp;&ensp;<br class="mobile_layout" />EMAIL : support@beatsomeone.com
+              </p>
+            </address>
+            <p class="copyright">
+              Copyright © 2022 BEAT SOMEONE. All rights reserved.
+            </p>
+          </div>
+          <ul class="sns_wrap">
+            <li class="icon_box insta"></li>
+            <li class="icon_box twitter"></li>
+            <li class="icon_box facebook"></li>
+            <li class="icon_box youtube"></li>
+            <li class="icon_box blog"></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="../../js/modalElement.js"></script>
+    <bybeats-modal></bybeats-modal>
+  </div>
+</body>
+
+</html>

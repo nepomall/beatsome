@@ -1,0 +1,877 @@
+@charset "utf-8";
+
+/* 통합회원전환 */
+.mypage.membership {}
+
+.mypage.membership .mypage_inner {
+    width: 600px;
+    margin: 0 auto 80px auto;
+}
+
+.mypage.membership .mypage_title {
+    margin-bottom: 32px;
+}
+
+.mypage.membership .mypage_inner>p {
+    font-weight: 500;
+    color: #1D1F28;
+    text-align: center;
+}
+
+.mypage.membership .change_nav {
+    width: 500px;
+    margin: 76px auto;
+}
+
+.mypage.membership .change_nav>ul {
+    display: flex;
+}
+
+.mypage.membership .change_nav>ul>li {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.mypage.membership .change_nav>ul:first-child {
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 8px;
+    /* width: 340px; */
+}
+
+.mypage.membership .change_nav>ul:first-child::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 340px;
+    height: 1.5px;
+    background-color: #DF0B17;
+}
+
+.mypage.membership .change_nav .round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #DF0B17;
+    background-color: #fff;
+    border: 2px solid #DF0B17;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+.mypage.membership .change_nav .round.active {
+    color: #fff;
+    background-color: #DF0B17;
+}
+
+.mypage.membership .btn_area {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 52px;
+}
+
+.mypage.membership .btn_area>.btn_apply {
+    width: 50%;
+    height: 45px;
+    margin-right: 20px;
+}
+
+.mypage.membership .btn_area>.btn_apply:last-child {
+    margin-right: 0;
+}
+
+
+/* membership_change */
+
+
+.mypage.membership.change fieldset {}
+
+.mypage.membership.change fieldset:first-child {
+    margin-bottom: 32px;
+}
+
+.mypage.membership.change fieldset .title_area {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.mypage.membership.change fieldset .title_area .sub_title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.mypage.membership.change fieldset .title_area>button {
+    padding: 6px 12px;
+    color: #fff;
+    background-color: #DF0B17;
+}
+
+.mypage.membership.change fieldset .terms_area {
+    height: 99px;
+    padding: 12px 14px 12px 30px;
+    margin-bottom: 5px;
+    background-color: #F8F8F8;
+}
+
+.mypage.membership.change fieldset .terms_area .terms_box {
+    height: 100%;
+    padding-right: 15px;
+    overflow-y: auto;
+}
+
+.mypage.membership.change fieldset .terms_area .terms_box p {
+    line-height: 1.5;
+}
+
+.mypage.membership.change fieldset .terms_box::-webkit-scrollbar {
+    width: 1px;
+    background-color: #D9D9D9;
+}
+
+.mypage.membership.change fieldset .terms_box::-webkit-scrollbar-thumb {
+    background-color: #111;
+}
+
+.mypage.membership.change fieldset .check_box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mypage.membership.change fieldset .check_box>label {
+    flex-direction: row-reverse;
+}
+
+.mypage.membership.change .check_box>input+label .check_box_text {
+    color: #222;
+}
+
+.mypage.membership.change .check_box .check_box_img {
+    margin-left: 10px;
+}
+
+/* membership_check, membership_complete 공통*/
+.mypage.membership.check .mypage_inner,
+.mypage.membership.complete .mypage_inner {
+    margin: 0 auto 278px auto;
+}
+
+
+.mypage.membership .check_area {
+    padding: 50px 0;
+    border-top: 1px solid #ACACAC;
+    border-bottom: 1px solid #ACACAC;
+    text-align: center;
+}
+
+.mypage.membership .check_area>p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.mypage.membership .change_nav {
+    margin: 76px auto 53px auto;
+}
+
+.mypage.membership .check_area .dl_box {
+    width: max-content;
+    margin: 45px auto 0 auto;
+}
+
+.mypage.membership .check_area .dl_box>dl {
+    display: flex;
+    margin-bottom: 11px;
+}
+
+.mypage.membership .check_area .dl_box>dl:last-child {
+    margin-bottom: 0;
+}
+
+.mypage.membership .check_area .dl_box>dl>dt {
+    width: 55px;
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+}
+
+.mypage.membership .check_area .dl_box>dl>dd {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* membership_complete */
+.mypage.membership.complete .btn_area>.btn_apply {
+    width: 100%;
+}
+
+
+/* pay_detail */
+.pay_detail .mypage_inner {
+    margin-bottom: 290px;
+}
+
+.pay_detail .pay_title {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.pay_detail .title_area {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.pay_detail .title_area>a {
+    padding: 12px 40px;
+    color: #aaa;
+    border: 1px solid #aaa;
+}
+
+.pay_detail .pay_detail_contents {
+    border-bottom: 2px solid #222;
+}
+
+.pay_detail .pay_detail_contents .flex_box {
+    display: flex;
+}
+
+.pay_detail .pay_detail_list {
+    display: flex;
+    padding: 16px 20px;
+    border-top: 1px solid #eee;
+}
+
+.pay_detail .pay_detail_list h4 {
+    flex-shrink: 0;
+    width: 140px;
+    font-weight: 500;
+}
+
+.pay_detail .pay_detail_list .ellipsis {
+    width: 330px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pay_detail .pay_detail_list.song_writer .purchase_date {
+    width: 70px;
+}
+
+.pay_detail .bought_list {
+    flex: 1;
+}
+
+.pay_detail .bought_list>li {
+    display: flex;
+    padding: 16px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.pay_detail .bought_list>li>div:first-child {
+    width: 330px;
+}
+
+.pay_detail .bought_list>li:first-child {
+    padding-top: 0;
+}
+
+.pay_detail .bought_list>li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.pay_detail .bought_list>li .list_title {
+    margin-bottom: 10px;
+}
+
+.pay_detail .bought_list>li dl {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.pay_detail .bought_list>li dl:last-child {
+    margin-bottom: 0;
+}
+
+.pay_detail .bought_list>li dl dt {
+    width: 75px;
+    font-size: 14px;
+    color: #acacac;
+}
+
+.pay_detail .bought_list>li dl dd {
+    font-size: 14px;
+    color: #444;
+}
+
+.pay_detail .bought_list>li .download_date {
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #acacac;
+}
+
+.pay_detail .bought_list>li .download_date span {
+    padding-left: 10px;
+    font-size: 12px;
+    color: #DF0B17;
+}
+
+.pay_detail .bought_list>li .resend_mail {
+    width: 127px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #DF0B17;
+}
+
+.pay_detail .bought_list>li .resend_mail.unable {
+    color: #ddd;
+    background-color: #eee;
+    pointer-events: none;
+    user-select: none;
+}
+
+.pay_detail .pay_detail_list.price ul>li {
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+    margin-bottom: 12px;
+}
+
+.pay_detail .pay_detail_list.price ul>li .price_type {}
+
+.pay_detail .pay_detail_list.price ul>li:last-child {
+    margin-bottom: 0;
+}
+
+.pay_detail .pay_detail_list.price ul>li:nth-child(3) {
+    margin-bottom: 38px;
+}
+
+.pay_detail .pay_detail_list.price ul>li .payment.all {
+    font-weight: 600;
+}
+
+.pay_detail .pay_detail_list.method p {
+    font-weight: 600;
+    color: #444;
+}
+
+
+
+
+
+/* ============================ 테블릿 ============================ */
+@media screen and (max-width: 1300px) {
+
+    /* 통합회원전환 */
+    .mypage.membership .mypage_inner {
+        width: calc(100vw * (600 /1300));
+        margin: 0 auto calc(100vw * (80 /1300)) auto;
+    }
+
+    .mypage.membership .mypage_title {
+        margin-bottom: calc(100vw * (32 /1300));
+    }
+
+    .mypage.membership .change_nav {
+        width: calc(100vw * (500 /1300));
+        margin: calc(100vw * (76 /1300)) auto;
+    }
+
+    .mypage.membership .change_nav>ul:first-child {
+        margin-bottom: calc(100vw * (8 /1300));
+    }
+
+    .mypage.membership .change_nav>ul:first-child::before {
+        width: calc(100vw * (340 /1300));
+    }
+
+    .mypage.membership .change_nav .round {
+        width: calc(100vw * (30 /1300));
+        height: calc(100vw * (30 /1300));
+        font-size: calc(100vw * (16 /1300));
+    }
+
+    .mypage.membership .btn_area {
+        margin-top: calc(100vw * (52 /1300));
+    }
+
+    .mypage.membership .btn_area>.btn_apply {
+        height: calc(100vw * (45 /1300));
+        margin-right: calc(100vw * (20 /1300));
+    }
+
+    /* membership_change */
+    .mypage.membership.change fieldset:first-child {
+        margin-bottom: calc(100vw * (32 /1300));
+    }
+
+    .mypage.membership.change fieldset .title_area {
+        margin-bottom: calc(100vw * (14 /1300));
+    }
+
+    .mypage.membership.change fieldset .title_area .sub_title {
+        font-size: calc(100vw * (16 /1300));
+    }
+
+    .mypage.membership.change fieldset .title_area>button {
+        padding: calc(100vw * (6 /1300)) calc(100vw * (12 /1300));
+    }
+
+    .mypage.membership.change fieldset .terms_area {
+        height: calc(100vw * (99 /1300));
+        padding: calc(100vw * (12 /1300)) calc(100vw * (14 /1300)) calc(100vw * (12 /1300)) calc(100vw * (30 /1300));
+        margin-bottom: calc(100vw * (5 /1300));
+    }
+
+    .mypage.membership.change fieldset .terms_area .terms_box {
+        padding-right: calc(100vw * (15 /1300));
+    }
+
+    .mypage.membership.change .check_box .check_box_img {
+        margin-left: calc(100vw * (10 /1300));
+    }
+
+    /* membership_check, membership_complete 공통*/
+    .mypage.membership.check .mypage_inner,
+    .mypage.membership.complete .mypage_inner {
+        margin: 0 auto calc(100vw * (278 /1300)) auto;
+    }
+
+
+    .mypage.membership .check_area {
+        padding: calc(100vw * (50 /1300)) 0;
+    }
+
+    .mypage.membership .check_area>p {
+        font-size: calc(100vw * (18 /1300));
+    }
+
+    .mypage.membership .change_nav {
+        margin: calc(100vw * (76 /1300)) auto calc(100vw * (53 /1300)) auto;
+    }
+
+    .mypage.membership .check_area .dl_box {
+        margin: calc(100vw * (45 /1300)) auto 0 auto;
+    }
+
+    .mypage.membership .check_area .dl_box>dl {
+        margin-bottom: calc(100vw * (11 /1300));
+    }
+
+    .mypage.membership .check_area .dl_box>dl>dt {
+        width: calc(100vw * (55 /1300));
+        font-size: calc(100vw * (16 /1300));
+    }
+
+    .mypage.membership .check_area .dl_box>dl>dd {
+        font-size: calc(100vw * (16 /1300));
+    }
+
+    /* pay_detail */
+    .pay_detail .mypage_inner {
+        margin-bottom: calc(100vw * (290 /1300));
+    }
+
+    .pay_detail .pay_title {
+        font-size: calc(100vw * (16 /1300));
+    }
+
+    .pay_detail .title_area {
+        margin-bottom: calc(100vw * (20 /1300));
+    }
+
+    .pay_detail .title_area>a {
+        padding: calc(100vw * (12 /1300)) calc(100vw * (40 /1300));
+    }
+
+    .pay_detail .pay_detail_list {
+        padding: calc(100vw * (16 /1300)) calc(100vw * (20 /1300));
+    }
+
+    .pay_detail .pay_detail_list h4 {
+        width: calc(100vw * (140 /1300));
+    }
+
+    .pay_detail .pay_detail_list .ellipsis {
+        width: calc(100vw * (330 /1300));
+    }
+
+    .pay_detail .pay_detail_list.song_writer .purchase_date {
+        width: calc(100vw * (70 /1300));
+    }
+
+    .pay_detail .bought_list>li {
+        padding: calc(100vw * (16 /1300)) 0;
+    }
+
+    .pay_detail .bought_list>li>div:first-child {
+        width: calc(100vw * (330 /1300));
+    }
+
+    .pay_detail .bought_list>li .list_title {
+        margin-bottom: calc(100vw * (10 /1300));
+    }
+
+    .pay_detail .bought_list>li dl {
+        margin-bottom: calc(100vw * (10 /1300));
+    }
+
+    .pay_detail .bought_list>li dl dt {
+        width: calc(100vw * (75 /1300));
+        font-size: calc(100vw * (14 /1300));
+    }
+
+    .pay_detail .bought_list>li dl dd {
+        font-size: calc(100vw * (14 /1300));
+    }
+
+    .pay_detail .bought_list>li .download_date {
+        margin-bottom: calc(100vw * (8 /1300));
+        font-size: calc(100vw * (12 /1300));
+    }
+
+    .pay_detail .bought_list>li .download_date span {
+        padding-left: calc(100vw * (10 /1300));
+        font-size: calc(100vw * (12 /1300));
+    }
+
+    .pay_detail .bought_list>li .resend_mail {
+        width: calc(100vw * (127 /1300));
+        height: calc(100vw * (30 /1300));
+        font-size: calc(100vw * (14 /1300));
+    }
+
+    .pay_detail .pay_detail_list.price ul>li {
+        width: calc(100vw * (280 /1300));
+        margin-bottom: calc(100vw * (12 /1300));
+    }
+
+    .pay_detail .pay_detail_list.price ul>li:nth-child(3) {
+        margin-bottom: calc(100vw * (38 /1300));
+    }
+
+}
+
+
+
+
+/* ============================ 모바일 ============================ */
+@media all and (max-width:768px) {
+
+    /* 통합회원전환 */
+    .mypage.membership .mypage_contents {
+        padding: calc(100vw * (30/428)) calc(100vw * (16/428));
+    }
+
+    .mypage.membership .mypage_inner {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .mypage.membership .mypage_title {
+        margin-bottom: calc(100vw * (20/428));
+    }
+
+    .mypage.membership .mypage_inner>p {
+        font-size: calc(100vw * (14/428));
+        line-height: 1.7;
+    }
+
+    .mypage.membership .change_nav>ul {
+        justify-content: space-between;
+    }
+
+    .mypage.membership .change_nav>ul>li {
+        display: flex;
+        width: calc(100vw * (60/428));
+        flex: initial;
+        justify-content: center;
+        line-height: 1.2;
+        font-size: calc(100vw * (14/428));
+    }
+
+    .mypage.membership .change_nav>ul>li:nth-child(2) {
+        width: calc(100vw * (105/428));
+    }
+
+    .mypage.membership .change_nav>ul:first-child {
+        margin-bottom: calc(100vw * (8/428));
+    }
+
+    .mypage.membership .change_nav>ul:first-child::before {
+        width: calc(100vw * (350/428));
+    }
+
+    .mypage.membership .change_nav .round {
+        width: calc(100vw * (30/428));
+        height: calc(100vw * (30/428));
+        font-size: calc(100vw * (16/428));
+    }
+
+    .mypage.membership .btn_area {
+        margin-top: calc(100vw * (52/428));
+    }
+
+    .mypage.membership.check .btn_area {
+        margin-top: calc(100vw * (30/428));
+    }
+
+    .mypage.membership .btn_area>.btn_apply {
+        height: calc(100vw * (45/428));
+        margin-right: calc(100vw * (20/428));
+    }
+
+    /* membership_change */
+    .mypage.membership.change fieldset:first-child {
+        margin-bottom: calc(100vw * (32/428));
+    }
+
+    .mypage.membership.change fieldset .title_area {
+        align-items: center;
+        margin-bottom: calc(100vw * (13/428));
+    }
+
+    .mypage.membership.change fieldset .title_area .sub_title {
+        font-size: calc(100vw * (14/428));
+    }
+
+    .mypage.membership.change fieldset .title_area>button {
+        padding: calc(100vw * (6/428)) calc(100vw * (12/428));
+        font-size: calc(100vw * (14/428));
+    }
+
+    .mypage.membership.change fieldset .terms_area {
+        height: calc(100vw * (99/428));
+        padding: calc(100vw * (12/428)) calc(100vw * (14/428)) calc(100vw * (12/428)) calc(100vw * (30/428));
+        margin-bottom: calc(100vw * (8/428));
+    }
+
+    .mypage.membership.change fieldset .terms_area .terms_box {
+        padding-right: calc(100vw * (15/428));
+    }
+
+    .mypage.membership.change .check_box .check_box_img {
+        margin-left: calc(100vw * (10/428));
+    }
+
+    .mypage.membership.change .check_box>input+label .check_box_text {
+        font-size: calc(100vw * (14/428));
+    }
+
+    /* membership_check, membership_complete 공통*/
+    .mypage.membership.check .mypage_inner,
+    .mypage.membership.complete .mypage_inner {
+        margin: calc(100vw * (50/428)) auto calc(100vw * (80/428)) auto;
+    }
+
+    .mypage.membership .check_area {
+        padding: calc(100vw * (46/428)) 0;
+    }
+
+    .mypage.membership .check_area>p {
+        font-size: calc(100vw * (18/428));
+    }
+
+    .mypage.membership .change_nav {
+        width: 100%;
+        margin: calc(100vw * (55/428)) auto calc(100vw * (78/428));
+    }
+
+    .mypage.membership.check .change_nav,
+    .mypage.membership.complete .change_nav {
+        margin-bottom: calc(100vw * (40/428));
+    }
+
+    .mypage.membership .check_area .dl_box {
+        margin: calc(100vw * (45/428)) auto 0 auto;
+    }
+
+    .mypage.membership .check_area .dl_box>dl {
+
+        margin-bottom: calc(100vw * (12/428));
+    }
+
+    .mypage.membership .check_area .dl_box>dl>dt {
+        width: calc(100vw * (60/428));
+        font-size: calc(100vw * (14/428));
+    }
+
+    .mypage.membership .check_area .dl_box>dl>dd {
+        font-size: calc(100vw * (14/428));
+    }
+
+    /* pay_detail */
+    .pay_detail .mypage_contents {
+        padding: calc(100vw * (20/428)) calc(100vw * (20/428)) calc(100vw * (80/428)) calc(100vw * (20/428));
+    }
+
+    .pay_detail .mypage_inner {
+        margin-bottom: 0;
+    }
+
+    .pay_detail .pay_title {
+        font-size: calc(100vw * (16/428));
+    }
+
+    .pay_detail .title_area {
+        padding-bottom: calc(100vw * (15/428));
+        margin-bottom: 0;
+        border-bottom: calc(100vw * (2/428)) solid #222;
+    }
+
+    .pay_detail .title_area>a {
+        display: none;
+    }
+
+    .pay_detail .pay_detail_contents .flex_box {
+        padding: calc(100vw * (20/428)) 0;
+    }
+
+    .pay_detail .pay_detail_contents .flex_box:first-child {
+        border-bottom: 1px solid #eee;
+    }
+
+    .pay_detail .pay_detail_list {
+        padding: calc(100vw * (20/428)) 0;
+    }
+
+    .pay_detail .pay_detail_list.song_writer {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .pay_detail .pay_detail_list.bought {
+        flex-direction: column;
+    }
+
+    .pay_detail .pay_detail_list.bought h4 {
+        width: 100%;
+        margin-bottom: calc(100vw * (20/428));
+    }
+
+    .pay_detail .pay_detail_list h4 {
+        width: calc(100vw * (65/428));
+        font-size: calc(100vw * (14/428));
+        font-weight: 600;
+        line-height: 1.2;
+    }
+
+    .pay_detail .pay_detail_list .ellipsis {
+        width: auto;
+        flex: 1;
+        font-size: calc(100vw * (14/428));
+        white-space: initial;
+        overflow: initial;
+        text-overflow: initial;
+        line-height: 1.2;
+    }
+
+    .pay_detail .pay_detail_list.song_writer .purchase_date {
+        width: calc(100vw * (65/428));
+    }
+
+
+    .pay_detail .bought_list>li {
+        flex-direction: column;
+        padding: calc(100vw * (20/428)) 0;
+    }
+
+    .pay_detail .bought_list>li>div:first-child {
+        width: 100%;
+    }
+
+    .pay_detail .bought_list>li .list_title {
+        margin-bottom: calc(100vw * (10/428));
+        font-size: calc(100vw * (13/428));
+    }
+
+    .pay_detail .bought_list>li dl {
+        margin-bottom: calc(100vw * (10/428));
+    }
+
+    .pay_detail .bought_list>li dl:last-child {
+        margin-bottom: calc(100vw * (10/428));
+    }
+
+    .pay_detail .bought_list>li dl dt {
+        width: calc(100vw * (85/428));
+        font-size: calc(100vw * (14/428));
+    }
+
+    .pay_detail .bought_list>li dl dd {
+        font-size: calc(100vw * (12/428));
+    }
+
+    .pay_detail .bought_list>li .download_date {
+        margin-bottom: calc(100vw * (10/428));
+        font-size: calc(100vw * (12/428));
+    }
+
+    .pay_detail .bought_list>li .download_date span {
+        font-size: calc(100vw * (12/428));
+    }
+
+    .pay_detail .bought_list>li .resend_mail {
+        width: calc(100vw * (127/428));
+        height: calc(100vw * (30/428));
+        font-size: calc(100vw * (14/428));
+    }
+
+    .pay_detail .pay_detail_list.price {
+        flex-direction: column;
+    }
+
+    .pay_detail .pay_detail_list.price h4 {
+        width: 100%;
+        margin-bottom: calc(100vw * (10/428));
+    }
+
+    .pay_detail .pay_detail_list.price ul>li {
+        width: 100%;
+        margin-bottom: calc(100vw * (12/428));
+    }
+
+    .pay_detail .pay_detail_list.price ul>li .price_type {
+        font-size: calc(100vw * (14/428));
+    }
+
+    .pay_detail .pay_detail_list.price ul>li .payment {
+        font: calc(100vw * (14/428));
+    }
+
+    .pay_detail_list.method {
+        justify-content: space-between;
+    }
+
+    .pay_detail .pay_detail_list.price ul>li:last-child {
+        margin-bottom: 0;
+    }
+
+    .pay_detail .pay_detail_list.price ul>li:nth-child(3) {
+        margin-bottom: 38px;
+    }
+
+    .pay_detail .pay_detail_list.price ul>li .payment.all {
+        font-weight: 600;
+    }
+
+    .pay_detail .pay_detail_list.method p {
+        font-weight: 600;
+        color: #444;
+    }
+
+
+}

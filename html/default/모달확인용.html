@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEAT SOMEONE</title>
+    <script type="text/javascript" src="../../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/modal.css" />
+
+    <!-- js -->
+    <script src="../../js/jquery-3.6.0.js"></script>
+    <script src="../../js/common.js"></script>
+</head>
+<style>
+    body {
+        padding: 100px 0 0;
+    }
+
+    .divide {
+        width: 640px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .ex {
+        width: 200px;
+        height: 50px;
+        display: block;
+        background: #ccc;
+        border: 1px solid #000;
+        margin-bottom: 20px;
+    }
+</style>
+<!-- 모달 구조는 modalElements.js에 있습니다. -->
+<body>
+    <div class="divide">
+        <button type="button" class="ex open_modal_1">
+            sns 가입된 정보 없음
+        </button>
+        <button type="button" class="ex open_modal_2">
+            통합회원 전환 완료 모달
+        </button>
+        <button type="button" class="ex open_modal_3">
+            통합회원 전환 취소 모달
+        </button>
+        <button type="button" class="ex open_modal_4">
+            이미 가입된 계정
+        </button>
+        <button type="button" class="ex open_modal_5">
+            비밀번호 재설정 모달 2
+        </button>
+        <button type="button" class="ex open_modal_6">
+            비밀번호 재설정 모달 1
+        </button>
+        <button type="button" class="ex open_modal_7">
+            휴면해제 모달
+        </button>
+        <button type="button" class="ex open_modal_8">
+            비밀번호 입력 모달
+        </button>
+        <button type="button" class="ex open_modal_9">
+            회원가입 route 모달
+        </button>
+        <button type="button" class="ex open_modal_10">
+            로그인 route 모달
+        </button>
+        <button type="button" class="ex open_modal_11">
+            자동 로그아웃 안내
+        </button>
+        <button type="button" class="ex open_modal_12">
+            신규회원가입 모달
+        </button>
+        <button type="button" class="ex open_modal_13">
+            컨텐츠 등록 모달
+        </button>
+        <button type="button" class="ex open_modal_14">
+            컨텐츠 등록완료 모달
+        </button>
+        <button type="button" class="ex open_modal_15">
+            컨텐츠 등록 취소 모달
+        </button>
+        <button type="button" class="ex open_modal_16">
+            컨텐츠 삭제 모달
+        </button>
+        <button type="button" class="ex open_modal_17">
+            컨텐츠 삭제 완료 모달
+        </button>
+        <button type="button" class="ex open_modal_18">
+            댓글 삭제 모달
+        </button>
+        <button type="button" class="ex open_modal_19">
+            댓글 삭제 완료 모달
+        </button>
+        <button type="button" class="ex open_modal_20">
+            로그인 요청 모달
+        </button>
+        <button type="button" class="ex open_modal_21">
+            신고하기 모달
+        </button>
+        <button type="button" class="ex open_modal_22">
+            휴면해제 완료 모달
+        </button>
+        <button type="button" class="ex open_modal_23">
+            비밀번호 재설정 완료 모달
+        </button>
+        <button type="button" class="ex open_modal_24">
+            회원가입 완료 모달
+        </button>
+        <button type="button" class="ex open_modal_25">
+            프로필 수정 완료 모달
+        </button>
+        <button type="button" class="ex open_modal_26">
+            회원정보 수정 완료 모달
+        </button>
+        <button type="button" class="ex open_modal_27">
+            회원가입 중복체크 모달
+        </button>
+        <button type="button" class="ex open_modal_28">
+            회원탈퇴 완료 모달
+        </button>
+        <button type="button" class="ex open_modal_29">
+            음원 재발송 모달
+        </button>
+        <button type="button" class="ex open_modal_30">
+            복사 완료 모달
+        </button>
+        <button type="button" class="ex open_modal_31">
+            추천인코드 복사 완료 모달
+        </button>
+        <button type="button" class="ex open_modal_32">
+            리뷰 등록 모달
+        </button>
+        <button type="button" class="ex open_modal_33">
+            통합계정 이용약관 모달
+        </button>
+        <button type="button" class="ex open_modal_34">
+            이용약관 모달
+        </button>
+        <button type="button" class="ex open_modal_35">
+            개인정보 처리방침 모달
+        </button>
+        <button type="button" class="ex open_modal_36">
+            클립보드 복사 완료 모달
+        </button>
+
+    </div>
+
+    <script type="text/javascript" src="../../js/modalElement.js"></script>
+    <bybeats-modal></bybeats-modal>
+</body>
+<script>
+    $(document).ready(function () {
+
+        $('.open_modal_1').click(function () {
+            $('.noSnsModal').fadeIn(200);
+        });
+        $('.open_modal_2').click(function () {
+            $('.memberChangeDone').fadeIn(200);
+        });
+        $('.open_modal_3').click(function () {
+            $('.memberChangeCancel').fadeIn(200);
+        });
+        $('.open_modal_4').click(function () {
+            $('.aleadyJoin_modal').fadeIn(200);
+        });
+        $('.open_modal_5').click(function () {
+            $('.pwResetting_modal.stepTwo').fadeIn(200);
+        });
+        $('.open_modal_6').click(function () {
+            $('.pwResetting_modal.stepOne').fadeIn(200);
+        });
+        $('.open_modal_7').click(function () {
+            $('.dormant_modal').fadeIn(200);
+        });
+        $('.open_modal_8').click(function () {
+            $('.password_modal').fadeIn(200);
+        });
+        $('.open_modal_9').click(function () {
+            $('.route_modal.signUp').fadeIn(200);
+        });
+        $('.open_modal_10').click(function () {
+            $('.route_modal.signIn').fadeIn(200);
+        });
+        $('.open_modal_11').click(function () {
+            $('.autoOut_modal').fadeIn(200);
+        });
+        $('.open_modal_12').click(function () {
+            $('.newSignup').fadeIn(200);
+        });
+        $('.open_modal_13').click(function () {
+            $('.conRegister_modal').fadeIn(200);
+        });
+        $('.open_modal_14').click(function () {
+            $('.conRegisterC_modal').fadeIn(200);
+        });
+        $('.open_modal_15').click(function () {
+            $('.registerCancel_modal').fadeIn(200);
+        });
+        $('.open_modal_16').click(function () {
+            $('.conDelete_modal').fadeIn(200);
+        });
+        $('.open_modal_17').click(function () {
+            $('.conDeleteC_modal').fadeIn(200);
+        });
+        $('.open_modal_18').click(function () {
+            $('.commentDelete_modal').fadeIn(200);
+        });
+        $('.open_modal_19').click(function () {
+            $('.commentDeleteC_modal').fadeIn(200);
+        });
+        $('.open_modal_20').click(function () {
+            $('.plzSignin_modal').fadeIn(200);
+        });
+        $('.open_modal_21').click(function () {
+            $('.declaration_modal').fadeIn(200);
+        });
+        $('.open_modal_22').click(function () {
+            $('.dormantClear_modal').fadeIn(200);
+        });
+        $('.open_modal_23').click(function () {
+            $('.pwResettingC_modal').fadeIn(200);
+        });
+        $('.open_modal_24').click(function () {
+            $('.signupC_modal').fadeIn(200);
+        });
+        $('.open_modal_25').click(function () {
+            $('.profileModify_modal').fadeIn(200);
+        });
+        $('.open_modal_26').click(function () {
+            $('.infoModify_modal').fadeIn(200);
+        });
+        $('.open_modal_28').click(function () {
+            $('.withdrawalC_modal').fadeIn(200);
+        });
+        $('.open_modal_29').click(function () {
+            $('.soundSend_modal').fadeIn(200);
+        });
+        $('.open_modal_30').click(function () {
+            $('.copy_modal').fadeIn(200);
+        });
+        $('.open_modal_31').click(function () {
+            $('.codeCopy_modal').fadeIn(200);
+        });
+        $('.open_modal_32').click(function () {
+            $('.reviewRegister_modal').fadeIn(200);
+        });
+        $('.open_modal_33').click(function () {
+            $('.unitTerms_modal').fadeIn(200);
+        });
+        $('.open_modal_34').click(function () {
+            $('.terms_modal').fadeIn(200);
+        });
+        $('.open_modal_35').click(function () {
+            $('.policy_modal').fadeIn(200);
+        });
+        $('.open_modal_36').click(function () {
+            $('.clipBoardCopy').fadeIn(200);
+        });
+
+
+
+        function selectBox() {
+            const selectBox = $('.select_box_wrap');
+            const selectClick = $('.select_list');
+            // 셀렉트박스 오픈
+            $(document).on('click', '.select_box_wrap', function () {
+                if ($(this).hasClass('open')) {
+                    $(this).removeClass('open active');
+                } else {
+                    // selectList.hide();
+                    selectBox.removeClass('open active');
+                    $(this).addClass('open active');
+                };
+            });
+
+            // 셀렉트 리스트 클릭
+            $(document).on('click', '.select_list', function () {
+                const selectData = $(this).html();
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                } else {
+                    selectClick.removeClass('selected');
+                    $(this).addClass('selected');
+                    $(this).closest('.select_box_wrap').find('.select_title').html(selectData);
+                    $(this).closest('.select_box_wrap').find('.select_title').addClass('active');
+                };
+            });
+
+            // 외부 영역 클릭
+            $(document).mouseup(function (e) {
+                if ($('.select_box_wrap').has(e.target).length === 0) {
+                    $('.select_box_wrap').removeClass('open active');
+                };
+            });
+        }
+        selectBox();
+
+    });
+</script>
+
+</html>

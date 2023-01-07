@@ -1,0 +1,204 @@
+.profile_manage .top_section .select_big_wrap {
+  width: auto;
+  margin-top: 33px;
+}
+
+.profile_manage .mypage_section .mypage_inner {
+  width: 600px;
+  margin: 0 auto;
+  padding: 50px 0 361px;
+}
+
+.profile_manage .mypage_section legend {
+  margin-bottom: 50px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111;
+  text-align: center;
+}
+
+.profile_manage .mypage_section .profile_img_con {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 50px;
+}
+
+.profile_manage .mypage_section .profile_img_con label {
+  cursor: pointer;
+}
+
+.profile_manage .mypage_section .profile_img_con input {
+  display: none;
+}
+
+.profile_manage .mypage_section .img_wrap {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile_manage .mypage_section .img_wrap img {
+  object-fit: cover;
+}
+
+.profile_manage .mypage_section .plus_img {
+  position: absolute;
+  bottom: 0;
+  right: 9px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.profile_manage .mypage_section .input_wrap {
+  margin-bottom: 11px;
+}
+
+.profile_manage .mypage_section .input_wrap input {
+  font-size: 16px;
+}
+
+.profile_manage .mypage_section .guide_wrap {
+  padding-left: 25px;
+}
+
+.profile_manage .mypage_section .guide_list {
+  list-style-type: disc;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.79;
+  color: #1d1f28;
+}
+
+.profile_manage .mypage_section .edit_btn {
+  width: 100%;
+  margin-top: 30px;
+  padding: 13px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: #df0b17;
+}
+
+.profile_manage .alert_box {
+  width: 330px;
+  max-width: unset;
+}
+
+
+
+
+
+
+/* =============================== 테블릿 =============================== */
+@media screen and (max-width: 1300px) {
+  .profile_manage .top_section .select_big_wrap {
+    margin-top: calc(100vw * (33 / 1300));
+  }
+
+  .profile_manage .mypage_section .mypage_inner {
+    width: calc(100vw * (600 / 1300));
+    padding: calc(100vw * (50 / 1300)) 0 calc(100vw * (316 / 1300));
+  }
+
+  .profile_manage .mypage_section legend {
+    margin-bottom: calc(100vw * (50 / 1300));
+    font-size: calc(100vw * (24 / 1300));
+  }
+
+  .profile_manage .mypage_section .profile_img_con {
+    width: calc(100vw * (160 / 1300));
+    height: calc(100vw * (160 / 1300));
+    margin: 0 auto calc(100vw * (50 / 1300));
+  }
+
+  .profile_manage .mypage_section .plus_img {
+    right: calc(100vw * (9 / 1300));
+    width: calc(100vw * (40 / 1300));
+    height: calc(100vw * (40 / 1300));
+  }
+
+  .profile_manage .mypage_section .input_wrap {
+    margin-bottom: calc(100vw * (11 / 1300));
+  }
+
+  .profile_manage .mypage_section .input_wrap input {
+    font-size: calc(100vw * (16 / 1300));
+  }
+
+  .profile_manage .mypage_section .guide_wrap {
+    padding-left: calc(100vw * (25 / 1300));
+  }
+
+  .profile_manage .mypage_section .guide_list {
+    font-size: calc(100vw * (14 / 1300));
+  }
+
+  .profile_manage .mypage_section .edit_btn {
+    margin-top: calc(100vw * (30 / 1300));
+    padding: calc(100vw * (13 / 1300));
+    font-size: calc(100vw * (16 / 1300));
+  }
+
+  .profile_manage .alert_box {
+    width: calc(100vw * (330 / 1300));
+  }
+}
+
+
+
+
+
+/* =============================== 모바일 =============================== */
+@media (max-width: 768px) {
+  .profile_manage .mypage_section .mypage_inner {
+    width: 100%;
+    padding: 0 0 calc(100vw * (80 / 428));
+  }
+
+  .profile_manage .mypage_section legend {
+    margin-bottom: calc(100vw * (50 / 428));
+    font-size: calc(100vw * (20 / 428));
+  }
+
+  .profile_manage .mypage_section .profile_img_con {
+    width: calc(100vw * (160 / 428));
+    height: calc(100vw * (160 / 428));
+    margin: 0 auto calc(100vw * (50 / 428));
+  }
+
+  .profile_manage .mypage_section .plus_img {
+    right: calc(100vw * (9 / 428));
+    width: calc(100vw * (40 / 428));
+    height: calc(100vw * (40 / 428));
+  }
+
+  .profile_manage .mypage_section .input_wrap {
+    margin-bottom: calc(100vw * (11 / 428));
+  }
+
+  .profile_manage .mypage_section .input_wrap input {
+    font-size: calc(100vw * (15 / 428));
+  }
+
+  .profile_manage .mypage_section .guide_wrap {
+    padding-left: calc(100vw * (17 / 428));
+  }
+
+  .profile_manage .mypage_section .guide_list {
+    font-size: calc(100vw * (14 / 428));
+  }
+
+  .profile_manage .mypage_section .edit_btn {
+    margin-top: calc(100vw * (30 / 428));
+    padding: calc(100vw * (13 / 428));
+    font-size: calc(100vw * (16 / 428));
+  }
+
+  .profile_manage .alert_box {
+    width: calc(100vw * (330 / 428));
+  }
+}

@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>BEAT SOMEONE</title>
+    <!--Import-->
+    <script type="text/javascript" src="../../js/jquery-3.6.0.js"></script>
+    <script type='text/javascript' src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script defer type="text/javascript" src="../../js/prd_detail.js"></script>
+    <!-- link -->
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/header_footer.css" />
+    <link rel="stylesheet" href="../../css/detail_page.css" />
+    <link rel="stylesheet" href="../../css/modal.css" />
+    <!-- favicon -->
+    <link rel="icon" href="../../images/icon/favicon.ico">
+</head>
+
+<body>
+
+    <div id="wrap">
+        <!-- 헤더 -->
+        <!-- 흰색 헤더는 클래스 white 추가 -->
+        <header class="header_pc">
+            <div class="header_top">
+                <div class="inner">
+                    <div class="tabs">
+                        <a href="" class="tab">
+                            <img src="../../images/icon/icon_bybeats_logotext.svg" alt="바이비츠 로고">
+                        </a>
+                        <a href="" class="tab active">
+                            <img src="../../images/icon/icon_beatsomeone_logotext.svg" alt="비트썸원 로고">
+                        </a>
+                    </div>
+                    <div class="right_side">
+                        <div class="search_wrap">
+                            <input type="text" placeholder="검색어를 입력해주세요." />
+                            <button class="search_btn" onclick="location.href='../search/search.html'"></button>
+                        </div>
+                        <div class="language_wrap">
+                            <button class="language_btn">Language</button>
+                            <ul class="language_list">
+                                <li class="active">한국어</li>
+                                <li>English</li>
+                                <li>日本</li>
+                                <li>中文</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header_bottom">
+                <div class="inner">
+                    <div class="left_side">
+                        <h1 class="logo">
+                            <a href="../index.html" class="link"></a>
+                        </h1>
+                        <ul class="gnb">
+                            <li class="list hasSec">
+                                <a href="#" onclick="return false;" class="link">
+                                    피드
+                                    <div class="bubble_box">
+                                        <div class="rolling">
+                                            <ul class="depth">
+                                                <li class="list">자작곡</li>
+                                                <li class="list">커버곡</li>
+                                                <li class="list">일상</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                                <ul class="sec_depth">
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            전체
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            자작곡
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            커버곡
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            일상
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list">
+                                <a href="../music_production_request/music_production_request_list.html" class="link">
+                                    음원제작 의뢰
+                                </a>
+                            </li>
+                            <li class="list hasSec">
+                                <a href="#" onclick="return false;" class="link">
+                                    질문/답변
+                                </a>
+                                <ul class="sec_depth">
+                                    <li class="list">
+                                        <a href="../question_answer/question_list.html" class="link">
+                                            질문/답변
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../question_answer/best_answer.html" class="link">
+                                            명예의 전당
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list">
+                                <a href="../trend/trend_list.html" class="link">
+                                    트렌드
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="../review/prd_list.html" class="link">
+                                    제품 리뷰
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="../mypage/event.html" class="link">
+                                    이벤트
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="../common/notice_list.html" class="link">
+                                    공지사항
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right_side">
+                        <!-- <ul class="user">
+                            <li class="list sign_in">
+                                <a href="#" onclick='return false' class="link">
+                                    로그인
+                                </a>
+                            </li>
+                            <li class="list sign_up">
+                                <a href="#" onclick='return false' class="link">
+                                    회원가입
+                                </a>
+                            </li>
+                        </ul> -->
+                        <div class="user_nav">
+                            <div class="img_box"></div>
+                            <span class="user_name">NickName</span>
+                            <ul class="user_menu">
+                                <li class="list">
+                                    <a href="../mypage/my_request_song.html" class="link">
+                                        마이페이지
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="../mypage/info_change.html" class="link">
+                                        개인정보 관리
+                                    </a>
+                                </li>
+                                <li class="list logout">
+                                    <a href="#" onclick="return false" class="link">
+                                        로그아웃
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 하단 네비 -->
+        <ul class="bottom_nav">
+            <li class="list home active">
+                <a href="../index.html" class="link">
+                    <div class="icon_box"></div>
+                    <span>홈</span>
+                </a>
+            </li>
+            <li class="list communication">
+                <a href="#" onclick="return false;" class="link">
+                    <div class="icon_box"></div>
+                    <span>커뮤니티</span>
+                </a>
+            </li>
+            <li class="list event">
+                <a href="../mypage/event.html" class="link">
+                    <div class="icon_box"></div>
+                    <span>이벤트</span>
+                </a>
+            </li>
+            <li class="list mypage">
+                <a href="../mypage/my_request_song.html" class="link">
+                    <div class="icon_box"></div>
+                    <span>마이페이지</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- 모바일 헤더 -->
+        <header class="header_mb detail_header">
+            <div class="inner">
+                <a href="javascript:history.back();" class="goBack_btn"></a>
+                <h1 class="logo">
+                    <a href="../index.html" class="link"></a>
+                </h1>
+                <div class="hamburger">
+                    <div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="page_title">
+                    제품상세
+                </div>
+            </div>
+            <div class="side_menu">
+                <div class="opacity_effect">
+                    <div class="top_area">
+                        <div class="language_wrap">
+                            <button class="language_btn">
+                                Language
+                            </button>
+                            <ul class="language_list">
+                                <li class="active">
+                                    한국어
+                                </li>
+                                <li>
+                                    English
+                                </li>
+                                <li>
+                                    日本
+                                </li>
+                                <li>
+                                    中文
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="../search/search.html" class="link search_btn"></a>
+                    </div>
+                    <div class="link_wrap">
+                        <a href="#" onclick="return false;" class="link">
+                            BEAT SOMEONE
+                        </a>
+                        <a href="#" onclick="return false;" class="link">
+                            BYBEATS
+                        </a>
+                    </div>
+                    <!-- 로그인전 -->
+                    <!-- <div class="sign_inup">
+                      <a href="#" onclick="return false;" class="link">
+                          로그인
+                      </a>
+                      <a href="#" onclick="return false;" class="link">
+                          회원가입
+                      </a>
+                  </div> -->
+                    <!-- 로그인 후 -->
+                    <div class="profile_box">
+                        <div class="img_box">
+                            <img src="../../images/icon/icon_user-circle.svg" alt="">
+                        </div>
+                        <div class="text_area">
+                            <p class="nickname">
+                                NICKNAME
+                            </p>
+                            <a href="../mypage/my_request_song.html" class="info_btn">
+                                김비트님
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="accordion">
+                        <li class="list">
+                            <div>
+                                <div class="title main_link">
+                                    피드
+                                </div>
+                                <ul class="sec_depth">
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link active">
+                                            - 전체
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            - 자작곡
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            - 커버곡
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            - 일상
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list">
+                            <a href="../music_production_request/music_production_request_list.html" class="link main_link">
+                                음원제작 의뢰
+                            </a>
+                        </li>
+                        <li class="list">
+                            <div>
+                                <div class="title main_link">
+                                    질문/답변
+                                </div>
+                                <ul class="sec_depth">
+                                    <li class="list">
+                                        <a href="../question_answer/question_list.html" class="link active">
+                                            - 질문/답변
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../question_answer/question_list.html" class="link">
+                                            - 명예의 전당
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list">
+                            <a href="../trend/trend_list.html" class="link main_link">
+                                트렌드
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="../review/prd_list.html" class="link main_link">
+                                제품 리뷰
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="../mypage/event.html" class="link main_link">
+                                이벤트
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#" onclick="return false;" class="link main_link">
+                                공지사항
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="side_bg"></div>
+        </header>
+
+        <section id="wrap_content" class="detail_page prd_detail">
+            <div class="top_section">
+                <article class="nav">
+                    <span>HOME</span>
+                    <span class="arrow_icon"><img src="../../images/icon/icon_arrow_right_black.svg"
+                            alt="화살표 아이콘" /></span>
+                    <span>제품리뷰</span>
+                    <span class="arrow_icon"><img src="../../images/icon/icon_arrow_right_black.svg"
+                            alt="화살표 아이콘" /></span>
+                    <span>제품상세</span>
+                </article>
+            </div>
+            <div class="inner">
+                <div class="prd_top_area">
+                    <div class="left">
+                        <div class="prd_slide_area">
+                            <div class="prd_slide_big swiper">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <img src="../../images/dummy/product_slide_img.jpg" alt="상품 이미지">
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="../../images/dummy/product_01.jpg" alt="상품 이미지">
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="../../images/dummy/product_02.jpg" alt="상품 이미지">
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="../../images/dummy/product_03.jpg" alt="상품 이미지">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div thumbsSlider="" class="prd_slide_small swiper">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <img src="../../images/dummy/product_slide_img.jpg" alt="상품 이미지">
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="../../images/dummy/product_01.jpg" alt="상품 이미지">
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="../../images/dummy/product_02.jpg" alt="상품 이미지">
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <img src="../../images/dummy/product_03.jpg" alt="상품 이미지">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="review_summary">
+                            <div class="grade_box">
+                                <div class="review_num">
+                                    <dl>
+                                        <dt>구매자 리뷰 수</dt>
+                                        <dd>0건</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>실 사용자 리뷰 수</dt>
+                                        <dd>3건</dd>
+                                    </dl>
+                                </div>
+                                <dl class="grade_num">
+                                    <dt>총 평점</dt>
+                                    <dd>0.0 / 5</dd>
+                                </dl>
+                            </div>
+                            <button type="button" class="basic_btn_black_border full_size">실 사용자 리뷰 등록</button>
+                        </div>
+                    </div>
+
+                    <div class="right">
+                        <form action="">
+                            <fieldset>
+                                <legend hidden>상품 상세 구매</legend>
+                                <div class="badge_group">
+                                    <div class="state_area">
+                                        <p class="state_badge line_badge">최저가</p>
+                                        <p class="state_badge red_badge">진행중</p>
+                                    </div>
+                                    <div class="share_wrap">
+                                        <button type="button" class="share_btn"><span>공유하기</span></button>
+                                        <!-- 공유하기 버튼 클릭시 나오는 박스 -->
+                                        <div class="share_box">
+                                            <button type="button">
+                                                <img src="../../images/icon/signUp_facebook.svg" alt="페이스북 로고">
+                                            </button>
+                                            <button type="button">
+                                                <img src="../../images/icon/signUp_kakao.svg" alt="카카오톡 로고">
+                                            </button>
+                                            <button type="button">
+                                                <img src="../../images/icon/signUp_naver.svg" alt="네이버 로고">
+                                            </button>
+                                            <button type="button">
+                                                <img src="../../images/icon/signUp_twitter.svg" alt="트위터 로고">
+                                            </button>
+                                            <button type="button">
+                                                <img src="../../images/icon/icon_link_share.svg" alt="클립보드 복사 아이콘">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="option_area">
+                                    <div class="info_item">
+                                        <p class="prd_name">제품명 표기 영역으로 사용됩니다.</p>
+                                        <div class="prd_price">
+                                            <span class="real_price">120,000원</span>
+                                            <span class="sale_price">120,000원</span>
+                                        </div>
+                                        <button type="button" class="basic_btn_red_border full_size">쿠폰 받기</button>
+                                        <p class="gray_txt">* 쿠폰은 로그인 후 다운로드 및 사용이 가능합니다.</p>
+                                    </div>
+                                    <ul class="info_item event_list">
+                                        <li>
+                                            <div class="subtitle">신용카드 행사</div>
+                                            <div>
+                                                무이자 행사 자세히 보기
+                                                <button type="button" class="detail_view_btn">자세히보기</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="subtitle">배송 방식</div>
+                                            <div>
+                                                택배 배송 (3,000원)
+                                                <span class="small_txt">제주 - 3,000원 추가 / 도서산간 - 3,000원 추가</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="info_item">
+                                        <div class="select_box_wrap gray">
+                                            <!-- 셀렉트 박스가 선택되었을때 button 에 active 클래스 넣어주세요 -->
+                                            <!-- 0. 기본 -->
+                                            <button type="button" class="select_title">모델 선택</button>
+                                            <!-- 1. 선택되었을때 button에 active 클래스 추가 -->
+                                            <!-- <button class="active">선택</button> -->
+                                            <ul>
+                                                <li class="select_list">Option 1</li>
+                                                <li class="select_list">Option 1</li>
+                                                <li class="select_list">Option 1</li>
+                                            </ul>
+                                        </div>
+                                        <div class="select_box_wrap gray">
+                                            <!-- 셀렉트 박스가 선택되었을때 button 에 active 클래스 넣어주세요 -->
+                                            <!-- 0. 기본 -->
+                                            <button type="button" class="select_title">색상 선택</button>
+                                            <!-- 1. 선택되었을때 button에 active 클래스 추가 -->
+                                            <!-- <button class="active">선택</button> -->
+                                            <ul>
+                                                <li class="select_list">Option 1</li>
+                                                <li class="select_list">Option 1</li>
+                                                <li class="select_list">Option 1</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <ul class="prd_select_list info_item">
+                                        <li>
+                                            <p class="subtitle">제품명</p>
+                                            <ul class="option_list">
+                                                <li>옵션 #1</li>
+                                                <li>옵션 #1</span>
+                                            </ul>
+                                            <div class="num_group">
+                                                <div class="count_box">
+                                                    <button type="button" class="count_btn minus">마이너스 버튼</button>
+                                                    <input type="text" class="count_num" value="1"></input>
+                                                    <button type="button" class="count_btn plus">플러스 버튼</button>
+                                                </div>
+                                                <div class="price_wrap">
+                                                    <p class="price">120,000원</p>
+                                                    <button type="button" class="delete_btn">삭제버튼</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="total_price_wrap info_item">
+                                        <p class="subtitle">총 상품 금액</p>
+                                        <p>
+                                            <span>(총 수량 1개)</span>
+                                            <span class="total_price">82,321원</span>
+                                        </p>
+                                    </div>
+                                    <div class="btn_group info_item">
+                                        <button type="button" class="basic_btn_black">장바구니</button>
+                                        <button type="button" class="basic_btn_red">구매하기</button>
+                                    </div>
+                                    <!-- 판매 중지 일때 -->
+                                    <div class="stop_selling">
+                                        <p>
+                                            해당 제품은 모든 재고가 소진되어 <br>
+                                            <span>판매가 중지</span>되었습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="prd_bottom_area">
+                    <div class="list_tab">
+                        <button class="tab_item">제품 상세</button>
+                        <button class="tab_item active">구매 및 환불정책</button>
+                    </div>
+
+                    <!-- 제품 상세 -->
+                    <div class="content_area">
+                        <!-- 제품상세 정보가 들어갑니다 -->
+                    </div>
+
+                    <!-- 구매 및 환불정책 -->
+                    <div class="content_area">
+                        <div class="content_item">
+                            <h2 class="sub_title">배송 안내</h2>
+                            <ul class="descrip_list">
+                                <li>배송 방법 : 일반 택배 (택배사명)</li>
+                                <li>배송 가능 지역 및 배송비 안내</li>
+                            </ul>
+                            <table class="table">
+                                <colgroup>
+                                    <col width="50%">
+                                    <col width="50%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>지역</th>
+                                        <th>배송비</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>일반</td>
+                                        <td>배송 가능 (무료)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>제주 </td>
+                                        <td>배송 가능 (000원)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>도서산간</td>
+                                        <td>배송 가능 (000원)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <ul class="descrip_list">
+                                <li>배송 기간 : 출고 후 영업일 기준 2-5일 이내 받아 보실 수 있습니다.</li>
+                            </ul>
+                        </div>
+
+                        <div class="content_item">
+                            <h2 class="sub_title">취소/교환/반품 안내</h2>
+                            <h3>제품 발송 시작 전 청약철회 (취소)</h3>
+                            <ul class="descrip_list">
+                                <li>판매자가 제품 발송을 시작하기 전 ‘배송준비‘ 상태는 주문 취소가 가능합니다.</li>
+                                <li>제품의 조기 매진으로 주문기간이 변경되는 경우 주문 취소 가능 기간 역시 변경됩니다.</li>
+                                <li>제품의 특성에 따라 제주 및 도서 산간 지역의 경우 배송이 불가할 수 있으며, 결제 이후 자동으로 주문 취소 처리가 될 수 있습니다.</li>
+                                <li>직접 취소 : 마이페이지 > 주문 관리 > 주문 취소 선택</li>
+                                <li>고객센터를 통한 취소 : 비트썸원 > 고객센터 > 1:1문의 (주문 및 결제)</li>
+                            </ul>
+                        </div>
+
+                        <div class="content_item">
+                            <h3>제품 발송 시작 후 청약철회 (교환/반품)</h3>
+                            <ul class="descrip_list">
+                                <li>제품 수령 후 교환/반품이 가능합니다. (단, 배송준비/배송준비 완료/배송 중 상태의 경우, 주문 취소/교환/반품 불가)</li>
+                                <li>교환/반품을 요청한 경우, 제품 및 포장 상태는 재판매가 가능하여야 합니다.</li>
+                                <li>단순 변심으로 인한 교환/반품은 제품 수령일로부터 7일 이내 가능합니다.</li>
+                                <li>맞춤형 주문제작 제품 및 식품은 단순 변심으로 인한 교환/반품이 불가합니다.</li>
+                                <li>단순 변심의 경우 구매자는 다음의 왕복 배송비가 부담됩니다. (일반지역: 왕복배송비, 제주/도서산간 지역: 왕복 배송 실비)</li>
+                                <li>수령하신 제품이 불량인 경우, 사진을 포함하여 고객센터로 연락을 부탁드립니다.</li>
+                                <li>식품의 경우 파손이나 변질로 인해 제품의 섭취가 어려운 경우 사진을 포함하여 고객센터로 연락을 부탁드립니다.</li>
+                                <li>수령하신 제품의 내용이 표시, 광고 내용과 다르거나 계약 내용과 다르게 이행된 때에는 당해 제품을 공급받은 날부터 3개월 이내, 그 사실을 안 날 또는
+                                    알 수 있었던 날부터 30일 이내에 청약철회 등을 할 수 있습니다.</li>
+                                <li>제품 파손, 오 배송 등의 제작사 귀책 사유로 교환/반품이 필요한 경우 발생되는 배송비는 제작사가 부담합니다.</li>
+                                <li>배송정보(연락처/주소)가 올바르게 기재되지 않은 경우 배송지연 또는 반송될 수 있으므로 정확한 정보를 기재해 주시기 바라며, 이로 인해 발생되는
+                                    배송비가 부담될 수 있습니다.</li>
+                                <li>직접 교환/반품 접수 : 비트썸원 > 마이페이지 > 주문관리 > 반품 신청 또는 교환 신청 선택</li>
+                                <li>고객센터를 통한 교환/반품 접수 : 비트썸원 > 마이페이지 > 1:1 문의 (주문 및 결제)</li>
+                                <li>사이즈 색상변경 등 구매자 변심 사유로 교환/반품이 가능한 경우, 구매하신 분은 다음의 배송비를 부담하시게 됩니다. 단, 무료 배송인 제품을 반품하실
+                                    경우, 왕복 배송비 부담이 필요합니다. (일반지역: 왕복배송비, 제주/도서산간 지역: 왕복 배송 실비)</li>
+                            </ul>
+                        </div>
+
+                        <div class="content_item">
+                            <table class="table">
+                                <colgroup>
+                                    <col width="33%">
+                                    <col width="33%">
+                                    <col width="33%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>지역</th>
+                                        <th>교환 배송비(왕복)</th>
+                                        <th>반품 배송비(편도)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>일반</td>
+                                        <td>000 원</td>
+                                        <td>000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>제주 </td>
+                                        <td>000 원</td>
+                                        <td>000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>도서산간</td>
+                                        <td>000 원</td>
+                                        <td>000 원</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 푸터 -->
+        <footer>
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="../index.html" class="link"></a>
+                </h1>
+                <div class="right_side">
+                    <div class="content_area">
+                        <div class="cover">
+                            <ul class="foot_gnb">
+                                <li class="list">
+                                    <a href="#" onclick="return false;" class="link">
+                                        About Beat Someone
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#" onclick="return false;" class="link">
+                                        이용약관
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#" onclick="return false;" class="link">
+                                        개인정보 취급방침
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#" onclick="return false;" class="link">
+                                        공지사항
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#" onclick="return false;" class="link">
+                                        제휴 문의
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <address>
+                            <p>
+                                본사 : 서울특별시 도봉구 마들로13길 84, 서울창업허브 창동 2층
+                                8로(창동, 창동 아우르네)
+                            </p>
+                            <p>
+                                지점&스튜디오 : 서울특별시 마포구 와우산로3길 16,
+                                203호~205호(상수동, 석진스토리)
+                            </p>
+                            <p>
+                                대표이사: 김용환&ensp;&ensp;사업자등록번호:
+                                112-86-01117&ensp;&ensp;<br class="mobile_layout" />통신판매신고번호: 제2019-서울마포-2779호
+                            </p>
+                            <p>
+                                TEL : 070-4323-0000&ensp;&ensp;<br class="mobile_layout" />EMAIL :
+                                support@beatsomeone.com
+                            </p>
+                        </address>
+                        <p class="copyright">
+                            Copyright © 2022 BEAT SOMEONE. All rights reserved.
+                        </p>
+                    </div>
+                    <ul class="sns_wrap">
+                        <li class="icon_box insta"></li>
+                        <li class="icon_box twitter"></li>
+                        <li class="icon_box facebook"></li>
+                        <li class="icon_box youtube"></li>
+                        <li class="icon_box blog"></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="../../js/modalElement.js"></script>
+        <bybeats-modal></bybeats-modal>
+    </div>
+</body>
+
+</html>

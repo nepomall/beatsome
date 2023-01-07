@@ -1,0 +1,295 @@
+.search_page .content_section {
+  width: 400px;
+  margin: 0 auto;
+  padding: 66px 0 151px;
+}
+
+.find_box h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.find_box p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 16px 0 20px;
+}
+
+.find_box h2 + .search_input_area {
+  position: relative;
+  margin: 30px 0 0;
+}
+
+.find_box .search_input_area {
+  position: relative;
+}
+
+.find_box .search_input {
+  width: 100%;
+  height: 40px;
+  background: #ffffff;
+}
+
+.find_box .search_input input {
+  width: 100%;
+  height: 100%;
+  padding: 0 16px;
+  border: 1px solid #acacac;
+}
+
+.find_box .search_input input:focus,
+.find_box .search_input input:valid {
+  border-color: #222;
+}
+
+.find_box .search_icon {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-50%);
+}
+
+.search_page .search_wrap {
+  margin-top: 40px;
+}
+
+.search_page .result_txt,
+.search_page .result_txt span {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.search_page .result_txt .num {
+  margin-left: 18px;
+  font-size: 14px;
+  color: #DF0B17;
+}
+
+.search_page .list_box {}
+
+.search_page .title {
+  padding-bottom: 10px;
+  font-weight: 600;
+  border-bottom: 1px solid #222;
+}
+
+.search_page .search_list {
+  padding-top: 10px
+}
+
+.search_page .search_list li {
+  font-size: 16px;
+  color: #646464;
+}
+
+.search_page .search_list li+li {
+  margin-top: 20px;
+}
+
+.search_page .search_list .delete_btn {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+}
+
+.search_page .orange {
+  font-size: 16px;
+  color: #FF4B32;
+}
+
+.search_page .search_wrap.before .list_box li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1.1;
+}
+
+.search_page .before .search_list li+li {
+  margin-top: 10px;
+}
+
+.search_page .search_wrap.after .list_box {
+  margin-top: 40px;
+}
+
+
+
+/* =============================== 테블릿 =============================== */
+@media screen and (max-width: 1300px) {
+  .search_page .content_section {
+    width: calc(100vw * (400/1300));
+    padding: calc(100vw * (66/1300)) 0 calc(100vw * (151/1300));
+  }
+
+  .find_box h2 {
+    font-size: calc(100vw * (24/1300));
+  }
+
+  .find_box p {
+    font-size: calc(100vw * (16/1300));
+    margin: calc(100vw * (16/1300)) 0 calc(100vw * (20/1300));
+  }
+
+  .find_box h2 + .search_input_area {
+    margin: calc(100vw * (30/1300)) 0 0;
+  }
+
+  .find_box .search_input {
+    height: calc(100vw * (40/1300));
+  }
+
+  .find_box .search_input input {
+    padding: 0 calc(100vw * (16/1300));
+  }
+
+  .find_box .search_icon {
+    right: calc(100vw * (8/1300));
+    width: calc(100vw * (24/1300));
+    height: calc(100vw * (24/1300));
+  }
+
+  .search_page .search_wrap {
+    margin-top: calc(100vw * (40/1300));
+  }
+
+  .search_page .result_txt,
+  .search_page .result_txt span {
+    font-size: calc(100vw * (16/1300));
+  }
+
+  .search_page .result_txt .num {
+    margin-left: calc(100vw * (18/1300));
+    font-size: calc(100vw * (14/1300));
+  }
+
+  .search_page .title {
+    padding-bottom: calc(100vw * (10/1300));
+  }
+
+  .search_page .search_list {
+    padding-top: calc(100vw * (10/1300))
+  }
+
+  .search_page .search_list li {
+    font-size: calc(100vw * (16/1300));
+  }
+
+  .search_page .search_list li+li {
+    margin-top: calc(100vw * (20/1300));
+  }
+
+  .search_page .search_list .delete_btn {
+    width: calc(100vw * (30/1300));
+    height: calc(100vw * (30/1300));
+    padding: calc(100vw * (10/1300));
+  }
+
+  .search_page .orange {
+    font-size: calc(100vw * (16/1300));
+  }
+
+  .search_page .before .search_list li+li {
+    margin-top: calc(100vw * (10/1300));
+  }
+
+  .search_page .search_wrap.after .list_box {
+    margin-top: calc(100vw * (40/1300));
+  }
+}
+
+
+
+/* =============================== 모바일 =============================== */
+@media screen and (max-width: 768px) {
+  .search_page .content_section {
+    width: calc(100vw * (396/428));
+    padding: calc(100vw * (66/428)) 0 calc(100vw * (151/428));
+  }
+
+  .find_box h2 {
+    text-align: left;
+    font-size: calc(100vw * (20/428));
+  }
+
+  .find_box p {
+    font-size: calc(100vw * (16/428));
+    margin: calc(100vw * (16/428)) 0 calc(100vw * (20/428));
+  }
+
+  .find_box h2 + .search_input_area {
+    margin: calc(100vw * (30/428)) 0 0;
+  }
+
+  .find_box .search_input {
+    height: calc(100vw * (40/428));
+  }
+
+  .find_box .search_input input {
+    padding: 0 calc(100vw * (16/428));
+  }
+
+  .find_box .search_icon {
+    right: calc(100vw * (8/428));
+    width: calc(100vw * (24/428));
+    height: calc(100vw * (24/428));
+  }
+
+  .search_page .search_wrap {
+    margin-top: calc(100vw * (40/428));
+  }
+
+  .search_page .result_txt,
+  .search_page .result_txt span {
+    font-size: calc(100vw * (16/428));
+  }
+
+  .search_page .result_txt .num {
+    margin-left: calc(100vw * (18/428));
+    font-size: calc(100vw * (14/428));
+  }
+
+  .search_page .title {
+    padding-bottom: calc(100vw * (10/428));
+  }
+
+  .search_page .search_list {
+    padding-top: calc(100vw * (10/428))
+  }
+
+  .search_page .search_list li {
+    font-size: calc(100vw * (16/428));
+  }
+
+  .search_page .search_list li+li {
+    margin-top: calc(100vw * (20/428));
+  }
+
+  .search_page .search_list .delete_btn {
+    width: calc(100vw * (30/428));
+    height: calc(100vw * (30/428));
+    padding: calc(100vw * (10/428));
+  }
+
+  .search_page .orange {
+    font-size: calc(100vw * (16/428));
+  }
+
+  .search_page .before .title {
+    border: none;
+  }
+
+  .search_page .before .search_list li+li {
+    margin-top: calc(100vw * (10/428));
+  }
+
+  .search_page .search_wrap.after .list_box {
+    margin-top: calc(100vw * (40/428));
+  }
+}

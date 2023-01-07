@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEAT SOMEONE</title>
+
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/header_footer.css" />
+    <!-- favicon -->
+    <link rel="icon" href="../../images/icon/favicon.ico">
+
+    <script type="text/javascript" src="../../js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+
+    <div id="wrap" class="error_wrap">
+        <!-- 새로고침 모달 -->
+        <div class="modal_bg refresh_modal">
+            <h2 class="loading_icon">
+                <img src="../../images/icon/icon_loading.svg" alt="" />
+            </h2>
+        </div>
+
+        <div class="error_logo">
+            <img src="../../images/icon/icon_logo_pink.svg" alt="" />
+        </div>
+        <!-- 컨텐츠 -->
+        <main id="wrap_content" class="error_page full">
+            <div class="wrap_inner">
+                <div>
+                    <h2 class="error_icon">
+                        <img src="../../images/icon/icon_cloud.svg" alt="" />
+                    </h2>
+                    <h3 class="big_text">페이지 작동이 원할하지 않아요.</h3>
+                    <p class="sub_text page">
+                        새로고침 버튼을 클릭하여 재시도 해주시거나 <br> 재접속 해주시기 바랍니다.
+                        더욱 안정적인 서비스를 <br> 제공하기 위해 노력하겠습니다.
+                    </p>
+                    <div class="btn_wrap">
+                        <button type="button" class="basic_btn_red_border">새로고침</button>
+                        <button type="button" class="basic_btn_red" onclick="location.href='../index.html'">
+                            메인으로 가기
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+<script>
+    function scrollOff() {
+        $("body")
+            .addClass("scrollOff")
+            .on("scroll touchmove mousewheel", function (e) {
+                e.stopPropagation();
+            });
+    }
+
+    // 로딩 팝업
+    $(".error_page .btn_wrap .basic_btn_red_border").click(function () {
+        $(".modal_bg.refresh_modal").fadeIn(200);
+        scrollOff();
+    });
+
+    const timeout = function () {
+        $(".modal_bg.refresh_modal").hide();
+    };
+    setTimeout(timeout, 2000);
+</script>
+
+</html>

@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>BEAT SOMEONE</title>
+    <!--Import-->
+    <script type="text/javascript" src="../../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script defer type="text/javascript" src="../../js/detail_page.js"></script>
+    <!-- link -->
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/header_footer.css" />
+    <link rel="stylesheet" href="../../css/detail_page.css" />
+    <link rel="stylesheet" href="../../css/modal.css" />
+    <!-- favicon -->
+    <link rel="icon" href="../../images/icon/favicon.ico">
+</head>
+
+<body>
+
+    <div id="wrap">
+        <!-- 헤더 -->
+        <!-- 흰색 헤더는 클래스 white 추가 -->
+        <header class="header_pc">
+            <div class="header_top">
+                <div class="inner">
+                    <div class="tabs">
+                        <a href="" class="tab">
+                            <img src="../../images/icon/icon_bybeats_logotext.svg" alt="바이비츠 로고">
+                        </a>
+                        <a href="" class="tab active">
+                            <img src="../../images/icon/icon_beatsomeone_logotext.svg" alt="비트썸원 로고">
+                        </a>
+                    </div>
+                    <div class="right_side">
+                        <div class="search_wrap">
+                            <input type="text" placeholder="검색어를 입력해주세요." />
+                            <button class="search_btn" onclick="location.href='../search/search.html'"></button>
+                        </div>
+                        <div class="language_wrap">
+                            <button class="language_btn">Language</button>
+                            <ul class="language_list">
+                                <li class="active">한국어</li>
+                                <li>English</li>
+                                <li>日本</li>
+                                <li>中文</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header_bottom">
+                <div class="inner">
+                    <div class="left_side">
+                        <h1 class="logo">
+                            <a href="../index.html" class="link"></a>
+                        </h1>
+                        <ul class="gnb">
+                            <li class="list hasSec">
+                                <a href="#" onclick="return false;" class="link">
+                                    피드
+                                    <div class="bubble_box">
+                                        <div class="rolling">
+                                            <ul class="depth">
+                                                <li class="list">자작곡</li>
+                                                <li class="list">커버곡</li>
+                                                <li class="list">일상</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                                <ul class="sec_depth">
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            전체
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            자작곡
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            커버곡
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            일상
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list">
+                                <a href="../music_production_request/music_production_request_list.html" class="link">
+                                    음원제작 의뢰
+                                </a>
+                            </li>
+                            <li class="list hasSec">
+                                <a href="#" onclick="return false;" class="link">
+                                    질문/답변
+                                </a>
+                                <ul class="sec_depth">
+                                    <li class="list">
+                                        <a href="../question_answer/question_list.html" class="link">
+                                            질문/답변
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../question_answer/best_answer.html" class="link">
+                                            명예의 전당
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list">
+                                <a href="../trend/trend_list.html" class="link">
+                                    트렌드
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="../review/prd_list.html" class="link">
+                                    제품 리뷰
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="../mypage/event.html" class="link">
+                                    이벤트
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="../common/notice_list.html" class="link">
+                                    공지사항
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right_side">
+                        <!-- <ul class="user">
+                            <li class="list sign_in">
+                                <a href="#" onclick='return false' class="link">
+                                    로그인
+                                </a>
+                            </li>
+                            <li class="list sign_up">
+                                <a href="#" onclick='return false' class="link">
+                                    회원가입
+                                </a>
+                            </li>
+                        </ul> -->
+                        <div class="user_nav">
+                            <div class="img_box"></div>
+                            <span class="user_name">NickName</span>
+                            <ul class="user_menu">
+                                <li class="list">
+                                    <a href="../mypage/my_request_song.html" class="link">
+                                        마이페이지
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="../mypage/info_change.html" class="link">
+                                        개인정보 관리
+                                    </a>
+                                </li>
+                                <li class="list logout">
+                                    <a href="#" onclick="return false" class="link">
+                                        로그아웃
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 하단 네비 -->
+        <ul class="bottom_nav">
+            <li class="list home active">
+                <a href="../index.html" class="link">
+                    <div class="icon_box"></div>
+                    <span>홈</span>
+                </a>
+            </li>
+            <li class="list communication">
+                <a href="#" onclick="return false;" class="link">
+                    <div class="icon_box"></div>
+                    <span>커뮤니티</span>
+                </a>
+            </li>
+            <li class="list event">
+                <a href="../mypage/event.html" class="link">
+                    <div class="icon_box"></div>
+                    <span>이벤트</span>
+                </a>
+            </li>
+            <li class="list mypage">
+                <a href="../mypage/my_request_song.html" class="link">
+                    <div class="icon_box"></div>
+                    <span>마이페이지</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- 모바일 헤더 -->
+        <header class="header_mb detail_header">
+            <div class="inner">
+                <a href="javascript:history.back();" class="goBack_btn"></a>
+                <h1 class="logo">
+                    <a href="../index.html" class="link"></a>
+                </h1>
+                <div class="hamburger">
+                    <div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="page_title">
+                    리뷰 등록
+                </div>
+            </div>
+            <div class="side_menu">
+                <div class="opacity_effect">
+                    <div class="top_area">
+                        <div class="language_wrap">
+                            <button class="language_btn">
+                                Language
+                            </button>
+                            <ul class="language_list">
+                                <li class="active">
+                                    한국어
+                                </li>
+                                <li>
+                                    English
+                                </li>
+                                <li>
+                                    日本
+                                </li>
+                                <li>
+                                    中文
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="../search/search.html" class="link search_btn"></a>
+                    </div>
+                    <div class="link_wrap">
+                        <a href="#" onclick="return false;" class="link">
+                            BEAT SOMEONE
+                        </a>
+                        <a href="#" onclick="return false;" class="link">
+                            BYBEATS
+                        </a>
+                    </div>
+                    <!-- 로그인전 -->
+                    <!-- <div class="sign_inup">
+                      <a href="#" onclick="return false;" class="link">
+                          로그인
+                      </a>
+                      <a href="#" onclick="return false;" class="link">
+                          회원가입
+                      </a>
+                  </div> -->
+                    <!-- 로그인 후 -->
+                    <div class="profile_box">
+                        <div class="img_box">
+                            <img src="../../images/icon/icon_user-circle.svg" alt="">
+                        </div>
+                        <div class="text_area">
+                            <p class="nickname">
+                                NICKNAME
+                            </p>
+                            <a href="../mypage/my_request_song.html" class="info_btn">
+                                김비트님
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="accordion">
+                        <li class="list">
+                            <div>
+                                <div class="title main_link">
+                                    피드
+                                </div>
+                                <ul class="sec_depth">
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link active">
+                                            - 전체
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            - 자작곡
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            - 커버곡
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            - 일상
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list">
+                            <a href="../music_production_request/music_production_request_list.html" class="link main_link">
+                                음원제작 의뢰
+                            </a>
+                        </li>
+                        <li class="list">
+                            <div>
+                                <div class="title main_link">
+                                    질문/답변
+                                </div>
+                                <ul class="sec_depth">
+                                    <li class="list">
+                                        <a href="../question_answer/question_list.html" class="link active">
+                                            - 질문/답변
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../question_answer/question_list.html" class="link">
+                                            - 명예의 전당
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list">
+                            <a href="../trend/trend_list.html" class="link main_link">
+                                트렌드
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="../review/prd_list.html" class="link main_link">
+                                제품 리뷰
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="../mypage/event.html" class="link main_link">
+                                이벤트
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#" onclick="return false;" class="link main_link">
+                                공지사항
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="side_bg"></div>
+        </header>
+
+        <section id="wrap_content" class="detail_page">
+            <div class="wrap_inner">
+                <div class="top_area">
+                    <div class="inner">
+                        <div class="profile_box">
+                            <div class="profile_img">
+                                <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                            </div>
+                            <div>
+                                <p class="nickname">사용자 닉네임 표시</p>
+                                <p class="gray_text">13시간 전</p>
+                            </div>
+                        </div>
+                        <div class="share_wrap">
+                            <button type="button" class="share_btn"><span>공유하기</span></button>
+
+                            <!-- 공유하기 버튼 클릭시 나오는 박스 -->
+                            <div class="share_box">
+                                <button type="button">
+                                    <img src="../../images/icon/signUp_facebook.svg" alt="페이스북 로고">
+                                </button>
+                                <button type="button">
+                                    <img src="../../images/icon/signUp_kakao.svg" alt="카카오톡 로고">
+                                </button>
+                                <button type="button">
+                                    <img src="../../images/icon/signUp_naver.svg" alt="네이버 로고">
+                                </button>
+                                <button type="button">
+                                    <img src="../../images/icon/icon_insta_color.svg" alt="인스타그램 로고">
+                                </button>
+                                <button type="button">
+                                    <img src="../../images/icon/icon_link_share.svg" alt="클립보드 복사 아이콘">
+                                </button>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_area">
+                    <div class="inner">
+                        <div class="content content_img">
+                            <img src="../../images/dummy/dummy_img.jpg" alt="">
+                        </div>
+                        <div class="title">
+                            제목이 출력됩니다.
+                        </div>
+                        <p class="prd_name">모델명입니다</p>
+                        <div class="text_box">
+                            개시글 내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이
+                            출력됩니다.개시글 내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이 출력됩니다. 개시글 내용이 출력됩니다.개시글 내용이
+                            출력됩니다.개시글
+                            내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이
+                            출력됩니다.개시글 내용이 출력됩니다.개시글 내용이 출력됩니다. 개시글 내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이
+                            출력됩니다.개시글
+                            내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이 출력됩니다.개시글 내용이
+                            출력됩니다.
+                        </div>
+                    </div>
+                </div>
+                <!-- 페이지네이션 1페이지당 댓글 10개씩 출력 -->
+                <div class="comment_area">
+                    <div class="inner">
+                        <div class="top_box">
+                            <div class="mark_wrap">
+                                <button type="button" class="like_toggle_btn mark">
+                                    <span>9,999</span>
+                                </button>
+                                <div class="profile_wrap">
+                                    <ul>
+                                        <li>
+                                            <img src="../../images/dummy/profile_01.jpg" alt="프로필 이미지1" />
+                                        </li>
+                                        <li>
+                                            <img src="../../images/dummy/profile_02.jpg" alt="프로필 이미지1" />
+                                        </li>
+                                    </ul>
+                                    <span>2</span>
+                                </div>
+                            </div>
+                            <div class="btn_wrap">
+                                <a href="./prd_list.html" class="btn basic_btn_gray list_link">목록</a>
+                                <div class="group">
+                                    <button type="button" class="btn basic_btn_gray delete">삭제</button>
+                                    <button type="button" class="btn basic_btn_black edit">수정</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment_list">
+                            <div class="num_text">
+                                총 <b>999개</b>의 댓글이 있습니다.
+                            </div>
+                            <div class="comment_write">
+                                <div class="profile_img">
+                                    <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                                </div>
+                                <div class="white_wrap">
+                                    <textarea name="" id="" cols="30" rows="10" placeholder="댓글을 입력해주세요."></textarea>
+                                    <button type="button">작성</button>
+                                </div>
+                            </div>
+                            <div class="comment_item">
+                                <div class="wrapper">
+                                    <div class="profile_img">
+                                        <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                                    </div>
+                                    <div class="comment_right">
+                                        <div class="top">
+                                            <span class="nickname">
+                                                사용자 닉네임 표시
+                                            </span>
+                                            <span class="fix_text gray_text">고정됨</span>
+                                            <p class="gray_text time">13시간 전</p>
+                                        </div>
+                                        <div class="comment">
+                                            댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이
+                                            표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.
+                                            댓글
+                                            내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.
+                                        </div>
+                                        <a href="./prd_detail.html" class="basic_btn_red_border link_btn">구매 바로가기</a>
+                                        <div class="bottom">
+                                            <button type="button" class="like_toggle_btn active"><span>
+                                                    9,999
+                                                </span></button>
+                                            <button type="button" class="gray_text reply_btn">답글달기</button>
+                                        </div>
+                                        <div class="edit_btn_group">
+                                            <div class="edit_group">
+                                                <button type="button" class="edit_btn">수정</button>
+                                                <button type="button" class="delete_btn">삭제</button>
+                                            </div>
+                                            <div class="done_group">
+                                                <button type="button" class="done_btn">완료</button>
+                                                <button type="button" class="cancel_btn">취소</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 답글 달기 -->
+                                <div class="comment_write reply">
+                                    <div class="profile_img">
+                                        <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                                    </div>
+                                    <div class="white_wrap">
+                                        <textarea name="" id="" cols="30" rows="10"
+                                            placeholder="댓글을 입력해주세요."></textarea>
+                                        <button type="button">작성</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment_item">
+                                <div class="wrapper">
+                                    <div class="profile_img">
+                                        <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                                    </div>
+                                    <div class="comment_right">
+                                        <div class="top">
+                                            <span class="nickname">사용자 닉네임 표시</span>
+                                            <p class="time gray_text">13시간 전</p>
+                                            <button type="button" class="report">신고</button>
+                                        </div>
+                                        <div class="comment">
+                                            댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이
+                                            표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.
+                                            댓글
+                                            내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.
+                                        </div>
+                                        <div class="bottom">
+                                            <button type="button" class="like_toggle_btn"><span>9,999</span> </button>
+                                            <button type="button" class="gray_text reply_btn cancel">답글취소</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 답글 달기 -->
+                                <div class="comment_write reply on">
+                                    <div class="profile_img">
+                                        <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                                    </div>
+                                    <div class="white_wrap">
+                                        <textarea name="" id="" cols="30" rows="10"
+                                            placeholder="댓글을 입력해주세요."></textarea>
+                                        <button type="button">작성</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment_item">
+                                <div class="wrapper">
+                                    <div class="profile_img">
+                                        <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                                    </div>
+                                    <div class="comment_right">
+                                        <div class="top">
+                                            <span class="nickname">사용자 닉네임 표시</span>
+                                            <p class="time gray_text">13시간 전</p>
+                                        </div>
+                                        <div class="comment">
+                                            댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이
+                                            표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.
+                                            댓글
+                                            내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.
+                                        </div>
+                                        <div class="bottom">
+                                            <button type="button" class="like_toggle_btn"><span>
+                                                    9,999
+                                                </span></button>
+                                            <button type="button" class="gray_text reply_btn">답글달기</button>
+                                        </div>
+                                        <div class="edit_btn_group">
+                                            <div class="edit_group">
+                                                <button type="button" class="edit_btn">수정</button>
+                                                <button type="button" class="delete_btn">삭제</button>
+                                            </div>
+                                            <div class="done_group">
+                                                <button type="button" class="done_btn">완료</button>
+                                                <button type="button" class="cancel_btn">취소</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 답글 달기 -->
+                                <div class="comment_write reply">
+                                    <div class="profile_img">
+                                        <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                                    </div>
+                                    <div class="white_wrap">
+                                        <textarea name="" id="" cols="30" rows="10"
+                                            placeholder="댓글을 입력해주세요."></textarea>
+                                        <button type="button">작성</button>
+                                    </div>
+                                </div>
+                                <!-- 대댓글 -->
+                                <div class="comment_item">
+                                    <div class="wrapper">
+                                        <div class="profile_img">
+                                            <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                                        </div>
+                                        <div class="comment_right">
+                                            <div class="top">
+                                                <span class="nickname">사용자 닉네임 표시</span>
+                                                <p class="time gray_text">13시간 전</p>
+                                                <button type="button" class="report">신고</button>
+                                            </div>
+                                            <div class="comment">
+                                                <p class="user_tag">사용자 닉네임</p>
+                                                댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글
+                                                내용이
+                                                표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이
+                                                표기됩니다.
+                                                댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.
+                                            </div>
+                                            <div class="bottom">
+                                                <button type="button" class="like_toggle_btn"><span>
+                                                        9,999
+                                                    </span></button>
+                                                <button type="button" class="gray_text reply_btn cancel">답글취소</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 답글 달기 -->
+                                    <div class="comment_write reply on">
+                                        <div class="profile_img">
+                                            <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                                        </div>
+                                        <div class="white_wrap">
+                                            <textarea name="" id="" cols="30" rows="10"
+                                                placeholder="댓글을 입력해주세요."></textarea>
+                                            <button type="button">작성</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 대댓글 -->
+                                <!-- 수정 버튼을 누르면 edit 클래스 붙여주세요 -->
+                                <div class="comment_item edit">
+                                    <div class="wrapper">
+                                        <div class="profile_img">
+                                            <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                                        </div>
+                                        <div class="comment_right">
+                                            <div class="top">
+                                                <span class="nickname">사용자 닉네임 표시</span>
+                                                <p class="time gray_text">13시간 전</p>
+                                                <button type="button" class="report">신고</button>
+                                            </div>
+                                            <div class="comment">
+                                                <p class="user_tag">사용자 닉네임</p>
+                                                댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글
+                                                내용이
+                                                표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이
+                                                표기됩니다.
+                                                댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.
+                                            </div>
+                                            <div class="edit_comment">
+                                                <p class="user_tag">사용자 닉네임</p>
+                                                <textarea name=""
+                                                    id="">댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다. 댓글 내용이 표기됩니다.</textarea>
+                                            </div>
+                                            <div class="bottom">
+                                                <button type="button" class="like_toggle_btn"><span>
+                                                        9,999
+                                                    </span></button>
+                                                <button type="button" class="gray_text reply_btn">답글달기</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 답글 달기 -->
+                                    <div class="comment_write reply">
+                                        <div class="profile_img">
+                                            <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                                        </div>
+                                        <div class="white_wrap">
+                                            <textarea name="" id="" cols="30" rows="10"
+                                                placeholder="댓글을 입력해주세요."></textarea>
+                                            <button type="button">작성</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 비공개처리 글 private클래스 붙여주세요 -->
+                            <div class="comment_item private">
+                                <div class="wrapper">
+                                    <div class="profile_img">
+                                        <img src="../../images/dummy/profile_04.jpg" alt="프로필 사진">
+                                    </div>
+                                    <div class="comment_right">
+                                        <div class="top">
+                                            <span class="nickname">사용자 닉네임 표시</span>
+                                            <p class="time gray_text">13시간 전</p>
+                                            <button type="button" class="report">신고</button>
+                                        </div>
+                                        <div class="comment">
+                                            [관리자의 의해 비공개 처리된 댓글입니다.]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 페이지네이션 -->
+                    <div class="pagination_wrap">
+                        <button type="button" class="prev_next_btn prev">
+                            <img src="../../images/icon/icon_arrow_18px.svg" alt="화살표 아이콘" />
+                        </button>
+                        <div class="pagination_list">
+                            <button type="button" class="active">1</button>
+                            <button type="button">2</button>
+                            <button type="button">3</button>
+                            <button type="button">4</button>
+                            <button type="button">5</button>
+                            <p>...</p>
+                        </div>
+                        <button type="button" class="prev_next_btn">
+                            <img src="../../images/icon/icon_arrow_18px.svg" alt="화살표 아이콘" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 푸터 -->
+        <footer>
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="../index.html" class="link"></a>
+                </h1>
+                <div class="right_side">
+                    <div class="content_area">
+                        <div class="cover">
+                            <ul class="foot_gnb">
+                                <li class="list">
+                                    <a href="#" onclick="return false;" class="link">
+                                        About Beat Someone
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#" onclick="return false;" class="link">
+                                        이용약관
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#" onclick="return false;" class="link">
+                                        개인정보 취급방침
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#" onclick="return false;" class="link">
+                                        공지사항
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#" onclick="return false;" class="link">
+                                        제휴 문의
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <address>
+                            <p>
+                                본사 : 서울특별시 도봉구 마들로13길 84, 서울창업허브 창동 2층
+                                8로(창동, 창동 아우르네)
+                            </p>
+                            <p>
+                                지점&스튜디오 : 서울특별시 마포구 와우산로3길 16,
+                                203호~205호(상수동, 석진스토리)
+                            </p>
+                            <p>
+                                대표이사: 김용환&ensp;&ensp;사업자등록번호:
+                                112-86-01117&ensp;&ensp;<br class="mobile_layout" />통신판매신고번호: 제2019-서울마포-2779호
+                            </p>
+                            <p>
+                                TEL : 070-4323-0000&ensp;&ensp;<br class="mobile_layout" />EMAIL :
+                                support@beatsomeone.com
+                            </p>
+                        </address>
+                        <p class="copyright">
+                            Copyright © 2022 BEAT SOMEONE. All rights reserved.
+                        </p>
+                    </div>
+                    <ul class="sns_wrap">
+                        <li class="icon_box insta"></li>
+                        <li class="icon_box twitter"></li>
+                        <li class="icon_box facebook"></li>
+                        <li class="icon_box youtube"></li>
+                        <li class="icon_box blog"></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="../../js/modalElement.js"></script>
+        <bybeats-modal></bybeats-modal>
+    </div>
+</body>
+
+</html>

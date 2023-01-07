@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BEAT SOMEONE</title>
+  <!--Import-->
+  <script src="../../js/jquery-3.6.0.js"></script>
+  <script src="../../js/common.js "></script>
+  <!-- link -->
+  <link rel="stylesheet" href="../../css/reset.css" />
+  <link rel="stylesheet" href="../../css/common.css" />
+  <link rel="stylesheet" href="../../css/header_footer.css" />
+  <link rel="stylesheet" href="../../css/event.css" />
+  <link rel="stylesheet" href="../../css/modal.css" />
+  <!-- favicon -->
+  <link rel="icon" href="../../images/icon/favicon.ico">
+</head>
+
+<!-- 이벤트 페이지 -->
+
+<body>
+  <div id="wrap">
+    <!-- 헤더 -->
+    <!-- 흰색 헤더는 클래스 white 추가 -->
+    <header class="header_pc">
+      <div class="header_top">
+        <div class="inner">
+          <div class="tabs">
+            <a href="" class="tab">
+              <img src="../../images/icon/icon_bybeats_logotext.svg" alt="바이비츠 로고">
+            </a>
+            <a href="" class="tab active">
+              <img src="../../images/icon/icon_beatsomeone_logotext.svg" alt="비트썸원 로고">
+            </a>
+          </div>
+          <div class="right_side">
+            <div class="search_wrap">
+              <input type="text" placeholder="검색어를 입력해주세요." />
+              <button class="search_btn" onclick="location.href='../search/search.html'"></button>
+            </div>
+            <div class="language_wrap">
+              <button class="language_btn">Language</button>
+              <ul class="language_list">
+                <li class="active">한국어</li>
+                <li>English</li>
+                <li>日本</li>
+                <li>中文</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header_bottom">
+        <div class="inner">
+          <div class="left_side">
+            <h1 class="logo">
+              <a href="../index.html" class="link"></a>
+            </h1>
+            <ul class="gnb">
+              <li class="list hasSec">
+                <a href="#" onclick="return false;" class="link">
+                  피드
+                  <div class="bubble_box">
+                    <div class="rolling">
+                      <ul class="depth">
+                        <li class="list">자작곡</li>
+                        <li class="list">커버곡</li>
+                        <li class="list">일상</li>
+                      </ul>
+                    </div>
+                  </div>
+                </a>
+                <ul class="sec_depth">
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      전체
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      자작곡
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      커버곡
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      일상
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="list">
+                <a href="../music_production_request/music_production_request_list.html" class="link">
+                  음원제작 의뢰
+                </a>
+              </li>
+              <li class="list hasSec">
+                <a href="#" onclick="return false;" class="link">
+                  질문/답변
+                </a>
+                <ul class="sec_depth">
+                  <li class="list">
+                    <a href="../question_answer/question_list.html" class="link">
+                      질문/답변
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../question_answer/best_answer.html" class="link">
+                      명예의 전당
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="list">
+                <a href="../trend/trend_list.html" class="link">
+                  트렌드
+                </a>
+              </li>
+              <li class="list">
+                <a href="../review/prd_list.html" class="link">
+                  제품 리뷰
+                </a>
+              </li>
+              <li class="list">
+                <a href="../mypage/event.html" class="link">
+                  이벤트
+                </a>
+              </li>
+              <li class="list">
+                <a href="../common/notice_list.html" class="link">
+                  공지사항
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="right_side">
+            <!-- <ul class="user">
+                      <li class="list sign_in">
+                          <a href="#" onclick='return false' class="link">
+                              로그인
+                          </a>
+                      </li>
+                      <li class="list sign_up">
+                          <a href="#" onclick='return false' class="link">
+                              회원가입
+                          </a>
+                      </li>
+                  </ul> -->
+            <div class="user_nav">
+              <div class="img_box"></div>
+              <span class="user_name">NickName</span>
+              <ul class="user_menu">
+                <li class="list">
+                  <a href="../mypage/my_request_song.html" class="link">
+                    마이페이지
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="../mypage/info_change.html" class="link">
+                    개인정보 관리
+                  </a>
+                </li>
+                <li class="list logout">
+                  <a href="#" onclick="return false" class="link">
+                    로그아웃
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 하단 네비 -->
+    <ul class="bottom_nav">
+      <li class="list home active">
+        <a href="../index.html" class="link">
+          <div class="icon_box"></div>
+          <span>홈</span>
+        </a>
+      </li>
+      <li class="list communication">
+        <a href="#" onclick="return false;" class="link">
+          <div class="icon_box"></div>
+          <span>커뮤니티</span>
+        </a>
+      </li>
+      <li class="list event">
+        <a href="../mypage/event.html" class="link">
+          <div class="icon_box"></div>
+          <span>이벤트</span>
+        </a>
+      </li>
+      <li class="list mypage">
+        <a href="../mypage/my_request_song.html" class="link">
+          <div class="icon_box"></div>
+          <span>마이페이지</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- 모바일 헤더 -->
+    <header class="header_mb detail_header">
+      <div class="inner">
+        <a href="javascript:history.back();" class="goBack_btn"></a>
+        <h1 class="logo">
+          <a href="../index.html" class="link"></a>
+        </h1>
+        <div class="hamburger">
+          <div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="page_title">
+          EVENT
+        </div>
+      </div>
+      <div class="side_menu">
+        <div class="opacity_effect">
+          <div class="top_area">
+            <div class="language_wrap">
+              <button class="language_btn">
+                Language
+              </button>
+              <ul class="language_list">
+                <li class="active">
+                  한국어
+                </li>
+                <li>
+                  English
+                </li>
+                <li>
+                  日本
+                </li>
+                <li>
+                  中文
+                </li>
+              </ul>
+            </div>
+            <a href="../search/search.html" class="link search_btn"></a>
+          </div>
+          <div class="link_wrap">
+            <a href="#" onclick="return false;" class="link">
+              BEAT SOMEONE
+            </a>
+            <a href="#" onclick="return false;" class="link">
+              BYBEATS
+            </a>
+          </div>
+          <!-- 로그인전 -->
+          <!-- <div class="sign_inup">
+                <a href="#" onclick="return false;" class="link">
+                    로그인
+                </a>
+                <a href="#" onclick="return false;" class="link">
+                    회원가입
+                </a>
+            </div> -->
+          <!-- 로그인 후 -->
+          <div class="profile_box">
+            <div class="img_box">
+              <img src="../../images/icon/icon_user-circle.svg" alt="">
+            </div>
+            <div class="text_area">
+              <p class="nickname">
+                NICKNAME
+              </p>
+              <a href="../mypage/my_request_song.html" class="info_btn">
+                김비트님
+              </a>
+            </div>
+          </div>
+          <ul class="accordion">
+            <li class="list">
+              <div>
+                <div class="title main_link">
+                  피드
+                </div>
+                <ul class="sec_depth">
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link active">
+                      - 전체
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      - 자작곡
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      - 커버곡
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      - 일상
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="list">
+              <a href="../music_production_request/music_production_request_list.html" class="link main_link">
+                음원제작 의뢰
+              </a>
+            </li>
+            <li class="list">
+              <div>
+                <div class="title main_link">
+                  질문/답변
+                </div>
+                <ul class="sec_depth">
+                  <li class="list">
+                    <a href="../question_answer/question_list.html" class="link active">
+                      - 질문/답변
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../question_answer/question_list.html" class="link">
+                      - 명예의 전당
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="list">
+              <a href="../trend/trend_list.html" class="link main_link">
+                트렌드
+              </a>
+            </li>
+            <li class="list">
+              <a href="../review/prd_list.html" class="link main_link">
+                제품 리뷰
+              </a>
+            </li>
+            <li class="list">
+              <a href="../mypage/event.html" class="link main_link">
+                이벤트
+              </a>
+            </li>
+            <li class="list">
+              <a href="../common/notice_list.html" class="link main_link">
+                공지사항
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="side_bg"></div>
+    </header>
+
+    <div id="wrap_content" class="event_wrap">
+      <div class="wrap_inner">
+        <div class="event_section">
+          <section class="banner">
+            <img src="../../images/dummy/banner_ex.png" alt="banner" />
+          </section>
+          <section class="top_section">
+            <article class="nav">
+              <span>HOME</span>
+              <span class="arrow_icon"><img src="../../images/icon/icon_arrow_right_black.svg" alt="화살표 아이콘" /></span>
+              <span>ETC</span>
+              <span class="arrow_icon"><img src="../../images/icon/icon_arrow_right_black.svg" alt="화살표 아이콘" /></span>
+              <div class="select_big_wrap">
+                <!-- 버튼 클릭시 active 클래스 추가 -->
+                <!-- <div class="select_box_wrap_gray active"> -->
+                <div class="select_box_wrap gray">
+                  <button class="select_title active">이벤트</button>
+                  <ul>
+                    <li class="select_list">이벤트</li>
+                    <li class="select_list">이벤트</li>
+                    <li class="select_list">이벤트</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- 이벤트 컨텐츠 -->
+          <section class="event_content_wrap">
+            <div class="event_title_area">
+              <h3 class="event_title">EVENT</h3>
+              <div class="select_big_wrap">
+                <!-- 버튼 클릭시 active 클래스 추가 -->
+                <!-- <div class="select_box_wrap_gray active"> -->
+                <div class="select_box_wrap gray">
+                  <button class="select_title active">전체</button>
+                  <ul>
+                    <li class="select_list">전체</li>
+                    <li class="select_list">진행 중</li>
+                    <li class="select_list">당첨자 발표</li>
+                    <li class="select_list">종료</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- 리스트 -->
+            <ul class="content">
+              <li class="event_list">
+                <a href="event_detail.html">
+                  <div class="event_img">
+                    <img src="../../images/dummy/banner_img_03.jpg" alt="" />
+                  </div>
+                  <p class="event_name">
+                    이벤트 컨텐츠 제목 표기 영역으로 사용 이벤트 컨텐츠 제목
+                    표기 영역 으로 사용 이벤트 컨텐츠 제목 표기 영역으로 사용
+                  </p>
+                  <p class="event_date">
+                    이벤트 기간 :
+                    <span class="date">2022.07.12 ~ 2022.07.18</span>
+                  </p>
+                </a>
+              </li>
+              <!-- 종료된 이벤트일 경우 제목과 날짜 색이 회색으로 변경됩니다. -->
+              <li class="event_list">
+                <a href="event_detail.html">
+                  <div class="event_img_wrap">
+                    <div class="event_img">
+                      <img src="../../images/dummy/cover_img_11.jpg" alt="" />
+                    </div>
+                    <div class="end_cover">
+                      <p class="end_text">종료된 이벤트</p>
+                    </div>
+                  </div>
+                  <p class="event_name end">
+                    이벤트 컨텐츠 제목 표기 영역으로 사용 이벤트 컨텐츠 제목
+                    표기 영역 으로 사용 이벤트 컨텐츠 제목 표기 영역으로 사용
+                  </p>
+                  <p class="event_date end">
+                    이벤트 기간 :
+                    <span class="date">2022.07.12 ~ 2022.07.18</span>
+                  </p>
+                </a>
+              </li>
+              <li class="event_list">
+                <a href="event_detail.html">
+                  <div class="event_img">
+                    <img src="../../images/dummy/cover_img_10.jpg" alt="" />
+                  </div>
+                  <p class="event_name">
+                    이벤트 컨텐츠 제목 표기 영역으로 사용 이벤트 컨텐츠 제목
+                    표기 영역 으로 사용 이벤트 컨텐츠 제목 표기 영역으로 사용
+                  </p>
+                  <p class="event_date">
+                    이벤트 기간 :
+                    <span class="date">2022.07.12 ~ 2022.07.18</span>
+                  </p>
+                </a>
+              </li>
+              <li class="event_list">
+                <a>
+                  <div class="event_img">
+                    <img src="../../images/dummy/cover_img_10.jpg" alt="" />
+                  </div>
+                  <p class="event_name">
+                    이벤트 컨텐츠 제목 표기 영역으로 사용 이벤트 컨텐츠 제목
+                    표기 영역 으로 사용 이벤트 컨텐츠 제목 표기 영역으로 사용
+                  </p>
+                  <p class="event_date">
+                    이벤트 기간 :
+                    <span class="date">2022.07.12 ~ 2022.07.18</span>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+      <div class="inner">
+        <h1 class="logo">
+          <a href="../index.html" class="link"></a>
+        </h1>
+        <div class="right_side">
+          <div class="content_area">
+            <div class="cover">
+              <ul class="foot_gnb">
+                <li class="list">
+                  <a href="#" onclick="return false;" class="link">
+                    About Beat Someone
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" onclick="return false;" class="link">
+                    이용약관
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" onclick="return false;" class="link">
+                    개인정보 취급방침
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" onclick="return false;" class="link">
+                    공지사항
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" onclick="return false;" class="link">
+                    제휴 문의
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <address>
+              <p>
+                본사 : 서울특별시 도봉구 마들로13길 84, 서울창업허브 창동 2층
+                8로(창동, 창동 아우르네)
+              </p>
+              <p>
+                지점&스튜디오 : 서울특별시 마포구 와우산로3길 16,
+                203호~205호(상수동, 석진스토리)
+              </p>
+              <p>
+                대표이사: 김용환&ensp;&ensp;사업자등록번호:
+                112-86-01117&ensp;&ensp;<br class="mobile_layout" />통신판매신고번호: 제2019-서울마포-2779호
+              </p>
+              <p>
+                TEL : 070-4323-0000&ensp;&ensp;<br class="mobile_layout" />EMAIL : support@beatsomeone.com
+              </p>
+            </address>
+            <p class="copyright">
+              Copyright © 2022 BEAT SOMEONE. All rights reserved.
+            </p>
+          </div>
+          <ul class="sns_wrap">
+            <li class="icon_box insta"></li>
+            <li class="icon_box twitter"></li>
+            <li class="icon_box facebook"></li>
+            <li class="icon_box youtube"></li>
+            <li class="icon_box blog"></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="../../js/modalElement.js"></script>
+    <bybeats-modal></bybeats-modal>
+  </div>
+</body>
+
+</html>

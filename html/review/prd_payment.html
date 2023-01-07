@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BEAT SOMEONE</title>
+  <!--Import-->
+  <script src="../../js/jquery-3.6.0.js"></script>
+
+  <script src="../../js/common.js "></script>
+
+  <!-- link -->
+  <link rel="stylesheet" href="../../css/reset.css" />
+  <link rel="stylesheet" href="../../css/common.css" />
+  <link rel="stylesheet" href="../../css/payment.css" />
+  <link rel="stylesheet" href="../../css/header_footer.css" />
+  <link rel="stylesheet" href="../../css/modal.css" />
+  <!-- favicon -->
+  <link rel="icon" href="../../images/icon/favicon.ico">
+</head>
+
+<!-- 제품 결제하기 페이지 -->
+
+<body>
+  <div id="wrap">
+
+    <!-- 쿠폰 선택 모달 -->
+    <div class="modal_wrap form_modal coupon_select_modal" style="display: block;">
+      <div class="modal_box">
+        <button class="x_btn close_btn"></button>
+        <div class="title">쿠폰 선택</div>
+
+        <ul class="content_wrap">
+          <li class="list">
+            <div class="name">쿠폰 이름 표기</div>
+            <div class="type">정액</div>
+            <div class="sale_num">
+              5% 할인
+              <span>30,000원 이상 구매 시</span>
+            </div>
+            <div class="date">2022.12.12 (D-99)</div>
+          </li>
+          <li class="list">
+            <div class="name">쿠폰 이름 표기</div>
+            <div class="type">정액</div>
+            <div class="sale_num">
+              5% 할인
+              <span>30,000원 이상 구매 시</span>
+            </div>
+            <div class="date">2022.12.12 (D-99)</div>
+          </li>
+          <li class="list">
+            <div class="name">쿠폰 이름 표기</div>
+            <div class="type">정액</div>
+            <div class="sale_num">
+              5% 할인
+              <span>30,000원 이상 구매 시</span>
+            </div>
+            <div class="date">2022.12.12 (D-99)</div>
+          </li>
+        </ul>
+
+        <!-- 쿠폰 없을 시 -->
+        <!-- <div class="no_content">
+          <p>보유중인 쿠폰이 없습니다.</p>
+        </div> -->
+
+        <div class="button_wrap full">
+          <!-- 쿠폰 없을 시 disabled -->
+          <button type="button" class="basic_btn_red confirm_btn">선택</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 쿠폰 선택 완료 모달 -->
+    <div class="modal_wrap message_modal" style="display: block;">
+      <div class="modal_box done">
+        <button class="x_btn close_btn"></button>
+        <p class="comment">
+          쿠폰 선택이 완료되었습니다.
+        </p>
+        <div class="button_wrap">
+          <button type="button" class="basic_btn_red confirm_btn close_btn">
+            확인
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 현재 배송 정보 변경 모달 -->
+    <div class="modal_wrap message_modal" style="display: block;">
+      <div class="modal_box question">
+        <button class="x_btn close_btn"></button>
+        <p class="comment">
+          기존에 등록된 기본 배송지가 있습니다. <br>
+          현재 배송 정보로 변경 하시겠습니까
+        </p>
+        <div class="button_wrap">
+          <button type="button" class="basic_btn_red_border cancel_btn close_btn">
+            아니오
+          </button>
+          <button type="button" class="basic_btn_red confirm_btn close_btn">
+            네
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 헤더 -->
+    <!-- 흰색 헤더는 클래스 white 추가 -->
+    <header class="header_pc">
+      <div class="header_top">
+        <div class="inner">
+          <div class="tabs">
+            <a href="" class="tab">
+              <img src="../../images/icon/icon_bybeats_logotext.svg" alt="바이비츠 로고">
+            </a>
+            <a href="" class="tab active">
+              <img src="../../images/icon/icon_beatsomeone_logotext.svg" alt="비트썸원 로고">
+            </a>
+          </div>
+          <div class="right_side">
+            <div class="search_wrap">
+              <input type="text" placeholder="검색어를 입력해주세요." />
+              <button class="search_btn" onclick="location.href='../search/search.html'"></button>
+            </div>
+            <div class="language_wrap">
+              <button class="language_btn">Language</button>
+              <ul class="language_list">
+                <li class="active">한국어</li>
+                <li>English</li>
+                <li>日本</li>
+                <li>中文</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header_bottom">
+        <div class="inner">
+          <div class="left_side">
+            <h1 class="logo">
+              <a href="../index.html" class="link"></a>
+            </h1>
+            <ul class="gnb">
+              <li class="list hasSec">
+                <a href="#" onclick="return false;" class="link">
+                  피드
+                  <div class="bubble_box">
+                    <div class="rolling">
+                      <ul class="depth">
+                        <li class="list">자작곡</li>
+                        <li class="list">커버곡</li>
+                        <li class="list">일상</li>
+                      </ul>
+                    </div>
+                  </div>
+                </a>
+                <ul class="sec_depth">
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      전체
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      자작곡
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      커버곡
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      일상
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="list">
+                <a href="../music_production_request/music_production_request_list.html" class="link">
+                  음원제작 의뢰
+                </a>
+              </li>
+              <li class="list hasSec">
+                <a href="#" onclick="return false;" class="link">
+                  질문/답변
+                </a>
+                <ul class="sec_depth">
+                  <li class="list">
+                    <a href="../question_answer/question_list.html" class="link">
+                      질문/답변
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../question_answer/best_answer.html" class="link">
+                      명예의 전당
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="list">
+                <a href="../trend/trend_list.html" class="link">
+                  트렌드
+                </a>
+              </li>
+              <li class="list">
+                <a href="../review/prd_list.html" class="link">
+                  제품 리뷰
+                </a>
+              </li>
+              <li class="list">
+                <a href="../mypage/event.html" class="link">
+                  이벤트
+                </a>
+              </li>
+              <li class="list">
+                <a href="../common/notice_list.html" class="link">
+                  공지사항
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="right_side">
+            <!-- <ul class="user">
+                      <li class="list sign_in">
+                          <a href="#" onclick='return false' class="link">
+                              로그인
+                          </a>
+                      </li>
+                      <li class="list sign_up">
+                          <a href="#" onclick='return false' class="link">
+                              회원가입
+                          </a>
+                      </li>
+                  </ul> -->
+            <div class="user_nav">
+              <div class="img_box"></div>
+              <span class="user_name">NickName</span>
+              <ul class="user_menu">
+                <li class="list">
+                  <a href="../mypage/my_request_song.html" class="link">
+                    마이페이지
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="../mypage/info_change.html" class="link">
+                    개인정보 관리
+                  </a>
+                </li>
+                <li class="list logout">
+                  <a href="#" onclick="return false" class="link">
+                    로그아웃
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 하단 네비 -->
+    <ul class="bottom_nav">
+      <li class="list home active">
+        <a href="../index.html" class="link">
+          <div class="icon_box"></div>
+          <span>홈</span>
+        </a>
+      </li>
+      <li class="list communication">
+        <a href="#" onclick="return false;" class="link">
+          <div class="icon_box"></div>
+          <span>커뮤니티</span>
+        </a>
+      </li>
+      <li class="list event">
+        <a href="../mypage/event.html" class="link">
+          <div class="icon_box"></div>
+          <span>이벤트</span>
+        </a>
+      </li>
+      <li class="list mypage">
+        <a href="../mypage/my_request_song.html" class="link">
+          <div class="icon_box"></div>
+          <span>마이페이지</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- 모바일 헤더 -->
+    <header class="header_mb detail_header">
+      <div class="inner">
+        <a href="javascript:history.back();" class="goBack_btn"></a>
+        <h1 class="logo">
+          <a href="../index.html" class="link"></a>
+        </h1>
+        <div class="hamburger">
+          <div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="page_title">
+          결제하기
+        </div>
+      </div>
+      <div class="side_menu">
+        <div class="opacity_effect">
+          <div class="top_area">
+            <div class="language_wrap">
+              <button class="language_btn">
+                Language
+              </button>
+              <ul class="language_list">
+                <li class="active">
+                  한국어
+                </li>
+                <li>
+                  English
+                </li>
+                <li>
+                  日本
+                </li>
+                <li>
+                  中文
+                </li>
+              </ul>
+            </div>
+            <a href="../search/search.html" class="link search_btn"></a>
+          </div>
+          <div class="link_wrap">
+            <a href="#" onclick="return false;" class="link">
+              BEAT SOMEONE
+            </a>
+            <a href="#" onclick="return false;" class="link">
+              BYBEATS
+            </a>
+          </div>
+          <!-- 로그인전 -->
+          <!-- <div class="sign_inup">
+                <a href="#" onclick="return false;" class="link">
+                    로그인
+                </a>
+                <a href="#" onclick="return false;" class="link">
+                    회원가입
+                </a>
+            </div> -->
+          <!-- 로그인 후 -->
+          <div class="profile_box">
+            <div class="img_box">
+              <img src="../../images/icon/icon_user-circle.svg" alt="">
+            </div>
+            <div class="text_area">
+              <p class="nickname">
+                NICKNAME
+              </p>
+              <a href="../mypage/my_request_song.html" class="info_btn">
+                김비트님
+              </a>
+            </div>
+          </div>
+          <ul class="accordion">
+            <li class="list">
+              <div>
+                <div class="title main_link">
+                  피드
+                </div>
+                <ul class="sec_depth">
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link active">
+                      - 전체
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      - 자작곡
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      - 커버곡
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../feed/feed_list.html" class="link">
+                      - 일상
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="list">
+              <a href="../music_production_request/music_production_request_list.html" class="link main_link">
+                음원제작 의뢰
+              </a>
+            </li>
+            <li class="list">
+              <div>
+                <div class="title main_link">
+                  질문/답변
+                </div>
+                <ul class="sec_depth">
+                  <li class="list">
+                    <a href="../question_answer/question_list.html" class="link active">
+                      - 질문/답변
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="../question_answer/question_list.html" class="link">
+                      - 명예의 전당
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="list">
+              <a href="../trend/trend_list.html" class="link main_link">
+                트렌드
+              </a>
+            </li>
+            <li class="list">
+              <a href="../review/prd_list.html" class="link main_link">
+                제품 리뷰
+              </a>
+            </li>
+            <li class="list">
+              <a href="../mypage/event.html" class="link main_link">
+                이벤트
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" onclick="return false;" class="link main_link">
+                공지사항
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="side_bg"></div>
+    </header>
+
+    <div id="wrap_content" class="payment_page prd_payment">
+      <div class="wrap_inner">
+        <section class="payment_section">
+          <h2 class="title_text">결제하기</h2>
+
+          <form action="">
+            <fieldset>
+              <legend hidden>결제하기</legend>
+              <!-- 제품정보 -->
+              <div class="prd_info_list list_wrap">
+                <h3 class="sub_title">제품 정보</h3>
+                <div class="common_list">
+                  <div class="list_head">
+                    <p class="col_1">제품정보</p>
+                    <p class="col_2">주문수량</p>
+                    <p class="col_3">배송비</p>
+                    <p class="col_4">총 금액</p>
+                  </div>
+                  <ul class="list_body">
+                    <li>
+                      <div class="prd_img">
+                        <img src="../../images/dummy/album_img_03.jpg" alt="제품 이미지">
+                      </div>
+                      <div class="text_wrap">
+                        <div class="col_l prd_wrap">
+                          <div class="prd_info">
+                            <p class="name">제품명 표기 영역으로 사용됩니다.제품명 표기 영역으로 사용됩니다. 제품명 표기 영역으로 사용됩니다. 제품명 표기 영역으로 사용됩니다.
+                            </p>
+                            <div class="option_wrap">
+                              <p>옵션</p>
+                              <ul class="option_list">
+                                <li>옵션 #1</li>
+                                <li>옵션 #2</li>
+                                <li>옵션 #3</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col_2" data-subtitle="주문 수량">1개</div>
+                        <div class="col_3" data-subtitle="배송비">3,000원</div>
+                        <div class="col_4">
+                          <span class="sale_price">88,321원</span>
+                          <span class="real_price">85,321원</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- 배송지 정보 -->
+              <div class="address_info list_wrap error">
+                <div class="title_wrap">
+                  <h3 class="sub_title">배송지 정보</h3>
+                  <p class="error_txt">기본 배송지로 설정된 배송 정보가 없습니다.</p>
+                </div>
+                <div class="common_list">
+                  <!-- 모바일에서는 셀렉트로 변합니다 -->
+                  <div class="select_box_wrap gray address_select mb_only">
+                    <button type="button" class="select_title">직접 입력</button>
+                    <ul>
+                      <li class="select_list">배송지1</li>
+                      <li class="select_list">배송지1</li>
+                      <li class="select_list">배송지1</li>
+                    </ul>
+                  </div>
+
+                  <ul class="list_head">
+                    <li class="check_box">
+                      <input type="radio" id="default01" name="address_info" checked />
+                      <label for="default01">
+                        <span class="check_box_img"></span>
+                        <span class="check_box_text">직접입력</span>
+                      </label>
+                    </li>
+                    <li class="check_box">
+                      <input type="radio" name="address_info" id="default02" />
+                      <label for="default02">
+                        <span class="check_box_img"></span>
+                        <span class="check_box_text">기본 배송지</span>
+                      </label>
+                    </li>
+                    <li class="check_box">
+                      <input type="radio" name="address_info" id="default03" />
+                      <label for="default03">
+                        <span class="check_box_img"></span>
+                        <span class="check_box_text">영등포 사무실</span>
+                      </label>
+                      <button type="button" class="address_delete_btn">삭제버튼</button>
+                    </li>
+                    <li class="check_box">
+                      <input type="radio" name="address_info" id="default04" />
+                      <label for="default04">
+                        <span class="check_box_img"></span>
+                        <span class="check_box_text">강남 사무실</span>
+                      </label>
+                      <button type="button" class="address_delete_btn">삭제버튼</button>
+                    </li>
+                  </ul>
+                  <ul class="list_body">
+                    <li>
+                      <p class="label_txt essential">수령인</p>
+                      <div class="input_wrap common_input">
+                        <input type="text" placeholder="수령인 입력">
+                      </div>
+                    </li>
+                    <li>
+                      <p class="label_txt">배송지명</p>
+                      <div class="input_wrap common_input error">
+                        <input type="text" placeholder="배송지명 입력">
+                      </div>
+                    </li>
+                    <li>
+                      <p class="label_txt essential">연락처1</p>
+                      <div class="tell_group common_input">
+                        <div class="select_box_wrap gray">
+                          <!-- 셀렉트 박스가 선택되었을때 button 에 active 클래스 넣어주세요 -->
+                          <!-- 0. 기본 -->
+                          <button type="button" class="select_title">+82</button>
+                          <!-- 1. 선택되었을때 button에 active 클래스 추가 -->
+                          <!-- <button class="active">선택</button> -->
+                          <ul>
+                            <li class="select_list">옵션1</li>
+                            <li class="select_list">옵션1</li>
+                            <li class="select_list">옵션1</li>
+                          </ul>
+                        </div>
+                        <div class="input_wrap">
+                          <input type="text" placeholder="휴대폰 번호 입력">
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="label_txt">연락처2</p>
+                      <div class="tell_group common_input">
+                        <div class="select_box_wrap gray">
+                          <!-- 셀렉트 박스가 선택되었을때 button 에 active 클래스 넣어주세요 -->
+                          <!-- 0. 기본 -->
+                          <button type="button" class="select_title">+82</button>
+                          <!-- 1. 선택되었을때 button에 active 클래스 추가 -->
+                          <!-- <button class="active">선택</button> -->
+                          <ul>
+                            <li class="select_list">옵션1</li>
+                            <li class="select_list">옵션1</li>
+                            <li class="select_list">옵션1</li>
+                          </ul>
+                        </div>
+                        <div class="input_wrap">
+                          <input type="text" placeholder="휴대폰 번호 추가 입력">
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <!-- 배송지명 지정 안될때 label_txt에 error클래스 추가 -->
+                      <p class="label_txt essential error">배송지 주소</p>
+                      <div class="adress_form">
+                        <div class="left">
+                          <div class="address_group common_input">
+                            <div class="input_wrap">
+                              <input type="text" placeholder="주소 찾기" readonly>
+                            </div>
+                            <button type="button" class="basic_btn_black action_btn">주소 검색</button>
+                          </div>
+                          <div class="input_wrap common_input">
+                            <input type="text" readonly>
+                          </div>
+                        </div>
+                        <div class="detail_address">
+                          <ul class="check_group">
+                            <li class="check_box">
+                              <input type="checkbox" id="default05" />
+                              <label for="default05">
+                                <span class="check_box_img"></span>
+                                <span class="check_box_text">배송지 목록에 추가</span>
+                              </label>
+                            </li>
+                            <li class="check_box">
+                              <input type="checkbox" id="default06" />
+                              <label for="default06">
+                                <span class="check_box_img"></span>
+                                <span class="check_box_text">기본 배송지로 설정</span>
+                              </label>
+                            </li>
+                          </ul>
+                          <p class="error_txt">이 배송정보의 배송지명을 설정해주세요.</p>
+                          <div class="input_wrap error">
+                            <input type="text" placeholder="상세 주소 입력">
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="label_txt essential">배송메모</p>
+                      <div class="textarea_wrap common_input">
+                        <textarea name="" id="" placeholder="배송 기사님께 전하는 메시지입니다."></textarea>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="coupon_point list_wrap">
+                <h3 class="sub_title">쿠폰 및 포인트</h3>
+                <div class="common_list">
+                  <ul class="list_body">
+                    <li>
+                      <p class="label_txt essential">쿠폰</p>
+                      <div class="common_input">
+                        <div class="input_wrap">
+                          <input type="text" placeholder="선택된 쿠폰이 없습니다." readonly>
+                        </div>
+                        <button type="button" class="basic_btn_black action_btn">쿠폰 선택</button>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="label_txt essential">포인트</p>
+                      <ul class="point_list">
+                        <!-- <li>
+                          <p class="small_title">보유 포인트</p>
+                          <div>
+                            <div class="common_input">
+                              <div class="input_wrap">
+                                <input type="text" value="18,320P" readonly>
+                              </div>
+                            </div>
+                            <p class="gray_txt">약 (00,000 {달러})</p>
+                          </div>
+                        </li> -->
+                        <li>
+                          <p class="small_title">보유 포인트</p>
+                          <div class="common_input">
+                            <div class="input_wrap">
+                              <input type="text" value="18,320P" readonly>
+                            </div>
+                          </div>
+                          <p class="gray_txt">약 (00,000 {달러})</p>
+                        </li>
+                        <li>
+                          <p class="small_title">사용할 포인트</p>
+                          <div class="common_input">
+                            <div class="input_wrap">
+                              <input type="text">
+                            </div>
+                            <button type="button" class="basic_btn_black action_btn">전액 사용</button>
+                          </div>
+                          <p class="gray_txt">약 (00,000 {달러})</p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- 결제수단 -->
+              <div class="payment_method list_wrap">
+                <h3 class="sub_title">결제수단 선택</h3>
+                <ul class="method_list common_list">
+                  <!-- 카드 간편결제 -->
+                  <li>
+                    <div class="check_area">
+                      <div class="radio_box black_label">
+                        <input type="radio" name="test_payment" id="default1">
+                        <label for="default1">
+                          <span class="radio_box_img"></span>
+                          <span class="radio_box_text">카드 간편결제</span>
+                        </label>
+                      </div>
+                    </div>
+                    <!-- 카드간편결제 체크시 보입니다 -->
+                    <div class="sub_area">
+                      <button type="button" class="card_item add_card">
+                        간편결제 카드 추가
+                        <span>간편하고 빠른 결제를 위해 <br>
+                          카드를 등록해 주세요.
+                        </span>
+                      </button>
+                      <div class="card_item my_card">
+                        <input type="checkbox" name="" id="my_card_check">
+                        <label for="my_card_check"></label>
+                        <p class="card_name">등록된 카드사명 카드</p>
+                        <p class="card_num">
+                          <span>카드번호</span>
+                          <span>1234-1234-1234-1234</span>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- 일반결제 -->
+                  <li>
+                    <div class="check_area">
+                      <div class="radio_box black_label">
+                        <input type="radio" name="test_payment" id="default2">
+                        <label for="default2">
+                          <span class="radio_box_img"></span>
+                          <span class="radio_box_text">일반결제</span>
+                        </label>
+                      </div>
+                    </div>
+                    <!-- 일반결제 체크시 보입니다 -->
+                    <div class="sub_area">
+                      <ul class="check_list">
+                        <li>
+                          <div class="radio_box black_label">
+                            <input type="radio" name="test_card" id="default3">
+                            <label for="default3">
+                              <span class="radio_box_img"></span>
+                              <span class="radio_box_text">신용/체크카드</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="radio_box black_label">
+                            <input type="radio" name="test_card" id="default4">
+                            <label for="default4">
+                              <span class="radio_box_img"></span>
+                              <span class="radio_box_text">가상계좌</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="radio_box black_label">
+                            <input type="radio" name="test_card" id="default5">
+                            <label for="default5">
+                              <span class="radio_box_img"></span>
+                              <span class="radio_box_text icon_toss">
+                                <img src="../../images/icon/icon_toss.svg" alt="toss 아이콘">
+                              </span>
+                            </label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="radio_box black_label">
+                            <input type="radio" name="test_card" id="default6">
+                            <label for="default6">
+                              <span class="radio_box_img"></span>
+                              <span class="radio_box_text icon_payco">
+                                <img src="../../images/icon/icon_payco.svg" alt="payco 아이콘">
+                              </span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <!-- paypal결제 -->
+                  <li>
+                    <div class="check_area">
+                      <div class="radio_box black_label">
+                        <input type="radio" name="test_payment" id="default7">
+                        <label for="default7">
+                          <span class="radio_box_img"></span>
+                          <span class="radio_box_text icon_paypal">
+                            <img src="../../images/icon/icon_paypal.svg" alt="paypal 아이콘">
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- payletter 결제 -->
+                  <li>
+                    <div class="check_area">
+                      <div class="radio_box black_label">
+                        <input type="radio" name="test_payment" id="default8">
+                        <label for="default8">
+                          <span class="radio_box_img"></span>
+                          <span class="radio_box_text icon_payletter">
+                            <img src="../../images/icon/icon_payletter.svg" alt="payletter 아이콘">
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="summary_wrap list_wrap">
+                <!-- 결제 상세 내역 -->
+                <div class="summary_info payment_detail_list">
+                  <h3 class="sub_title">결제 상세 내역</h3>
+                  <ul class="common_list">
+                    <li>
+                      <p class="label_txt">제품 금액</p>
+                      <p class="prd_price">38,750원</p>
+                    </li>
+                    <li>
+                      <p class="label_txt">배송비</p>
+                      <p>3,000원</p>
+                    </li>
+                    <li>
+                      <p class="label_txt">할인</p>
+                      <ul class="sale_info">
+                        <li>
+                          <p>자체 할인</p>
+                          <p>-38,750원</p>
+                        </li>
+                        <li>
+                          <p>쿠폰 할인</p>
+                          <p>-3,000원</p>
+                        </li>
+                        <li>
+                          <p>포인트 사용</p>
+                          <p>
+                            -2,700P
+                            <span class="gray_txt">(약 0,000{달러})</span>
+                          </p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <div class="total_group">
+                    <p class="label_txt">최종 결제 금액</p>
+                    <p class="total_price">82,321원</p>
+                  </div>
+                </div>
+
+                <!-- 포인트적립 -->
+                <div class="summary_info">
+                  <h3 class="sub_title">포인트 적립</h3>
+                  <ul class="common_list">
+                    <li>
+                      <p class="label_txt">구매 확정 후 적립</p>
+                      <p>+500P</p>
+                    </li>
+                    <li>
+                      <p class="label_txt">리뷰 작성 후 적립</p>
+                      <p>+300P</p>
+                    </li>
+                  </ul>
+                  <div class="total_group">
+                    <p class="label_txt">최대 적립 가능 포인트</p>
+                    <p class="total">+800P</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="terms_check_area">
+                <div class="check_box all_check">
+                  <input type="checkbox" id="default11" />
+                  <label for="default11">
+                    <span class="check_box_img"></span>
+                    아래 내용에 모두 동의해주세요. (필수)
+                  </label>
+                </div>
+                <ul class="terms_list">
+                  <li class="check_box">
+                    <input type="checkbox" id="default12" />
+                    <label for="default12">
+                      <span class="check_box_img"></span>
+                      <span class="red">(필수)</span>
+                      개인정보 수집 이용 및 제 3자 제공 동의
+                    </label>
+                    <button type="button" class="arrow_btn">약관보기</button>
+                  </li>
+                  <li class="check_box">
+                    <input type="checkbox" id="default13" />
+                    <label for="default13">
+                      <span class="check_box_img"></span>
+                      <span class="red">(필수)</span>
+                      결제대행 서비스 이용약관 동의 (필수)
+                    </label>
+                    <button type="button" class="arrow_btn">약관보기</button>
+                  </li>
+                </ul>
+                <p>
+                  ㈜비트썸원은 통신판매 중개자로 거래 당사자가 아니므로, 판매자가 등록한 상품정보 및 거래 등에 대해 책임을 지지 않습니다. <br>
+                  (단, ㈜비트썸원이 판매로 등록 판매한 상품은 판매자로서 책임을 부담합니다.
+                </p>
+                <p class="desctip_txt">상기 주문 내용을 확인하였으며, 배송지 및 결제 정보 제공에 동의합니다.</p>
+              </div>
+
+              <!-- 등록전엔 버튼에 disabled 처리 -->
+              <button class="basic_btn_red confirm_btn" disabled>결제하기</button>
+              <!-- paypal 결제 선택시 -->
+              <button class="confirm_btn paypal">
+                Pay with
+                <span class="radio_box_text icon_paypal">
+                  <img src="../../images/icon/icon_paypal.svg" alt="paypal 아이콘">
+                </span>
+              </button>
+              <!-- payletter 결제 선택시 -->
+              <button class="confirm_btn payletter">
+                Pay with
+                <span class="radio_box_text icon_payletter">
+                  <img src="../../images/icon/icon_payletter.svg" alt="payletter 아이콘">
+                </span>
+              </button>
+            </fieldset>
+          </form>
+
+        </section>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+      <div class="inner">
+        <h1 class="logo">
+          <a href="../index.html" class="link"></a>
+        </h1>
+        <div class="right_side">
+          <div class="content_area">
+            <div class="cover">
+              <ul class="foot_gnb">
+                <li class="list">
+                  <a href="#" onclick="return false;" class="link">
+                    About Beat Someone
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" onclick="return false;" class="link">
+                    이용약관
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" onclick="return false;" class="link">
+                    개인정보 취급방침
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" onclick="return false;" class="link">
+                    공지사항
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" onclick="return false;" class="link">
+                    제휴 문의
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <address>
+              <p>
+                본사 : 서울특별시 도봉구 마들로13길 84, 서울창업허브 창동 2층
+                8로(창동, 창동 아우르네)
+              </p>
+              <p>
+                지점&스튜디오 : 서울특별시 마포구 와우산로3길 16,
+                203호~205호(상수동, 석진스토리)
+              </p>
+              <p>
+                대표이사: 김용환&ensp;&ensp;사업자등록번호:
+                112-86-01117&ensp;&ensp;<br class="mobile_layout" />통신판매신고번호: 제2019-서울마포-2779호
+              </p>
+              <p>
+                TEL : 070-4323-0000&ensp;&ensp;<br class="mobile_layout" />EMAIL : support@beatsomeone.com
+              </p>
+            </address>
+            <p class="copyright">
+              Copyright © 2022 BEAT SOMEONE. All rights reserved.
+            </p>
+          </div>
+          <ul class="sns_wrap">
+            <li class="icon_box insta"></li>
+            <li class="icon_box twitter"></li>
+            <li class="icon_box facebook"></li>
+            <li class="icon_box youtube"></li>
+            <li class="icon_box blog"></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="../../js/modalElement.js"></script>
+    <bybeats-modal></bybeats-modal>
+  </div>
+</body>
+
+</html>

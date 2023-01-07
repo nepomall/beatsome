@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEAT SOMEONE</title>
+    <!--Import-->
+    <script type="text/javascript" src="../../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../../js/common.js "></script>
+    <script type="text/javascript" src="../../js/signinup.js "></script>
+    <!-- link -->
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/modal.css" />
+    <link rel="stylesheet" href="../../css/header_footer.css" />
+    <link rel="stylesheet" href="../../css/signinup.css" />
+    <!-- favicon -->
+    <link rel="icon" href="../../images/icon/favicon.ico">
+</head>
+
+<body>
+
+    <!-- 회원가입 페이지 -->
+
+    <div id="wrap">
+        <!-- 헤더 -->
+        <!-- 흰색 헤더는 클래스 white 추가 -->
+        <header class="header_pc">
+            <div class="header_top">
+                <div class="inner">
+                    <div class="tabs">
+                        <a href="" class="tab">
+                            <img src="../../images/icon/icon_bybeats_logotext.svg" alt="바이비츠 로고">
+                        </a>
+                        <a href="" class="tab active">
+                            <img src="../../images/icon/icon_beatsomeone_logotext.svg" alt="비트썸원 로고">
+                        </a>
+                    </div>
+                    <div class="right_side">
+                        <div class="search_wrap">
+                            <input type="text" placeholder="검색어를 입력해주세요." />
+                            <button class="search_btn" onclick="location.href='../search/search.html'"></button>
+                        </div>
+                        <div class="language_wrap">
+                            <button class="language_btn">Language</button>
+                            <ul class="language_list">
+                                <li class="active">한국어</li>
+                                <li>English</li>
+                                <li>日本</li>
+                                <li>中文</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header_bottom">
+                <div class="inner">
+                    <div class="left_side">
+                        <h1 class="logo">
+                            <a href="../index.html" class="link"></a>
+                        </h1>
+                        <ul class="gnb">
+                            <li class="list hasSec">
+                                <a href="#" onclick="return false;" class="link">
+                                    피드
+                                    <div class="bubble_box">
+                                        <div class="rolling">
+                                            <ul class="depth">
+                                                <li class="list">자작곡</li>
+                                                <li class="list">커버곡</li>
+                                                <li class="list">일상</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                                <ul class="sec_depth">
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            전체
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            자작곡
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            커버곡
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            일상
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list">
+                                <a href="../music_production_request/music_production_request_list.html" class="link">
+                                    음원제작 의뢰
+                                </a>
+                            </li>
+                            <li class="list hasSec">
+                                <a href="#" onclick="return false;" class="link">
+                                    질문/답변
+                                </a>
+                                <ul class="sec_depth">
+                                    <li class="list">
+                                        <a href="../question_answer/question_list.html" class="link">
+                                            질문/답변
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../question_answer/best_answer.html" class="link">
+                                            명예의 전당
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list">
+                                <a href="../trend/trend_list.html" class="link">
+                                    트렌드
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="../review/prd_list.html" class="link">
+                                    제품 리뷰
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="../mypage/event.html" class="link">
+                                    이벤트
+                                </a>
+                            </li>
+                            <li class="list">
+                                <a href="../common/notice_list.html" class="link">
+                                    공지사항
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right_side">
+                        <!-- <ul class="user">
+                            <li class="list sign_in">
+                                <a href="#" onclick='return false' class="link">
+                                    로그인
+                                </a>
+                            </li>
+                            <li class="list sign_up">
+                                <a href="#" onclick='return false' class="link">
+                                    회원가입
+                                </a>
+                            </li>
+                        </ul> -->
+                        <div class="user_nav">
+                            <div class="img_box"></div>
+                            <span class="user_name">NickName</span>
+                            <ul class="user_menu">
+                                <li class="list">
+                                    <a href="../mypage/my_request_song.html" class="link">
+                                        마이페이지
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="../mypage/info_change.html" class="link">
+                                        개인정보 관리
+                                    </a>
+                                </li>
+                                <li class="list logout">
+                                    <a href="#" onclick="return false" class="link">
+                                        로그아웃
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 하단 네비 -->
+        <ul class="bottom_nav">
+            <li class="list home active">
+                <a href="../index.html" class="link">
+                    <div class="icon_box"></div>
+                    <span>홈</span>
+                </a>
+            </li>
+            <li class="list communication">
+                <a href="#" onclick="return false;" class="link">
+                    <div class="icon_box"></div>
+                    <span>커뮤니티</span>
+                </a>
+            </li>
+            <li class="list event">
+                <a href="../mypage/event.html" class="link">
+                    <div class="icon_box"></div>
+                    <span>이벤트</span>
+                </a>
+            </li>
+            <li class="list mypage">
+                <a href="../mypage/my_request_song.html" class="link">
+                    <div class="icon_box"></div>
+                    <span>마이페이지</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- 모바일 헤더 -->
+        <header class="header_mb list_header">
+            <div class="inner">
+                <a href="javascript:history.back();" class="goBack_btn"></a>
+                <h1 class="logo">
+                    <a href="../index.html" class="link"></a>
+                </h1>
+                <div class="hamburger">
+                    <div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="page_title">
+                    MY PAGE
+                </div>
+            </div>
+            <div class="side_menu">
+                <div class="opacity_effect">
+                    <div class="top_area">
+                        <div class="language_wrap">
+                            <button class="language_btn">
+                                Language
+                            </button>
+                            <ul class="language_list">
+                                <li class="active">
+                                    한국어
+                                </li>
+                                <li>
+                                    English
+                                </li>
+                                <li>
+                                    日本
+                                </li>
+                                <li>
+                                    中文
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="../search/search.html" class="link search_btn"></a>
+                    </div>
+                    <div class="link_wrap">
+                        <a href="#" onclick="return false;" class="link">
+                            BEAT SOMEONE
+                        </a>
+                        <a href="#" onclick="return false;" class="link">
+                            BYBEATS
+                        </a>
+                    </div>
+                    <!-- 로그인전 -->
+                    <!-- <div class="sign_inup">
+                      <a href="#" onclick="return false;" class="link">
+                          로그인
+                      </a>
+                      <a href="#" onclick="return false;" class="link">
+                          회원가입
+                      </a>
+                  </div> -->
+                    <!-- 로그인 후 -->
+                    <div class="profile_box">
+                        <div class="img_box">
+                            <img src="../../images/icon/icon_user-circle.svg" alt="">
+                        </div>
+                        <div class="text_area">
+                            <p class="nickname">
+                                NICKNAME
+                            </p>
+                            <a href="../mypage/my_request_song.html" class="info_btn">
+                                김비트님
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="accordion">
+                        <li class="list">
+                            <div>
+                                <div class="title main_link">
+                                    피드
+                                </div>
+                                <ul class="sec_depth">
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link active">
+                                            - 전체
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            - 자작곡
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            - 커버곡
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../feed/feed_list.html" class="link">
+                                            - 일상
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list">
+                            <a href="../music_production_request/music_production_request_list.html" class="link main_link">
+                                음원제작 의뢰
+                            </a>
+                        </li>
+                        <li class="list">
+                            <div>
+                                <div class="title main_link">
+                                    질문/답변
+                                </div>
+                                <ul class="sec_depth">
+                                    <li class="list">
+                                        <a href="../question_answer/question_list.html" class="link active">
+                                            - 질문/답변
+                                        </a>
+                                    </li>
+                                    <li class="list">
+                                        <a href="../question_answer/question_list.html" class="link">
+                                            - 명예의 전당
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="list">
+                            <a href="../trend/trend_list.html" class="link main_link">
+                                트렌드
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="../review/prd_list.html" class="link main_link">
+                                제품 리뷰
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="../mypage/event.html" class="link main_link">
+                                이벤트
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="#" onclick="return false;" class="link main_link">
+                                공지사항
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="side_bg"></div>
+        </header>
+
+        <div id="wrap_content" class="signUp_page">
+            <div class="top_deco"></div>
+
+            <!-- 메인컨텐츠 -->
+            <section class="content_section">
+                <div class="wrap_inner">
+                    <h3 class="title">
+                        통합회원가입
+                    </h3>
+                    <div class="logo_wrap">
+                        <div class="beat_some"></div>
+                        <div class="icon_x"></div>
+                        <div class="by_beats"></div>
+                    </div>
+                    <div class="input_container">
+                        <form>
+                            <fieldset>
+                                <legend hidden>회원가입</legend>
+                                <!-- 이메일 -->
+                                <div class="input_box email">
+                                    <div class="input_wrap">
+                                        <input type="text" id="emInput" value="urchoco@naver.com" readonly>
+                                        <div class="alert_box wrap_box">
+                                            ID(email)가 아닌 다른 Email로 정보 수신을 원하실 경우 입력해 주세요.
+                                        </div>
+                                    </div>
+                                    <div class="input_wrap">
+                                        <input type="text" id="offen_em" placeholder="(선택)자주 사용하는 이메일 주소">
+                                    </div>
+                                </div>
+                                <!-- 비밀번호 -->
+                                <div class="input_box password">
+                                    <div class="input_wrap">
+                                        <input type="password" id="pw_input" placeholder="비밀번호를 입력해 주세요">
+                                        <div class="alert_box wrap_box">
+                                            영문, 숫자, 특수문자( !@#$%^&* ‘) 중 2가지 이상 조합 6자이상 16자 이하 사용 가능
+                                        </div>
+                                    </div>
+                                    <div class="input_wrap">
+                                        <input type="password" id="pw_input" placeholder="비밀번호를 한번 더 입력해 주세요.">
+                                    </div>
+                                    <p class="error_txt">
+                                        비밀번호가 잂치하지 않습니다.
+                                    </p>
+                                    <p class="complete_txt">
+                                        사용 가능한 비밀번호입니다.
+                                    </p>
+                                    <p class="error_txt">
+                                        6~18글자 사이의 비밀번호를 입력해 주세요.
+                                    </p>
+                                </div>
+                                <!-- 이름 및 별명 -->
+                                <div class="input_box name">
+                                    <div class="input_wrap">
+                                        <input type="text" id="name" placeholder="(필수)이름 입력">
+                                        <div class="alert_box">
+                                            본명 기재 권장 / 한글 기준 2자 이상
+                                        </div>
+                                    </div>
+                                    <div class="input_wrap nickname">
+                                        <input type="text" id="" placeholder="(필수)닉네임 입력">
+                                        <div class="alert_box wrap_box down">
+                                            대소문자, 숫자, 한글, 특수문자, 이모지, 중국어, 일본어 허용 / 한글 기준 2~20자 / 영어 기준 2~40자
+                                        </div>
+                                    </div>
+                                    <button type="button" class="basic_btn_red_border nicknameChk_btn">
+                                        확인
+                                    </button>
+                                    <p class="error_txt">
+                                        이미 사용중인 닉네임입니다.
+                                    </p>
+                                    <p class="error_txt">
+                                        닉네임은 최소 2글자 이상 입력해주세요.
+                                    </p>
+                                    <p class="complete_txt">
+                                        사용 가능한 닉네임입니다.
+                                    </p>
+                                </div>
+                                <!-- 휴대폰번호 -->
+                                <div class="input_box num">
+                                    <div class="num_wrap">
+                                        <div class="select_box_wrap">
+                                            <button type="button" onclick="return false;" class="select_title">+82</button>
+                                            <ul>
+                                                <li class="select_list">옵션1</li>
+                                                <li class="select_list">옵션1</li>
+                                                <li class="select_list">옵션1</li>
+                                            </ul>
+                                        </div>
+                                        <div class="input_wrap phone_num">
+                                            <input type="text" id="phone_num" placeholder="(필수) 휴대폰 번호 입력">
+                                        </div>
+                                    </div>
+                                    <p class="error_txt">
+                                        닉네임은 최소 2글자 이상 입력해주세요.
+                                    </p>
+                                    <div class="select_box_wrap">
+                                        <button type="button" onclick="return false;" class="select_title">(필수)
+                                            국가선택</button>
+                                        <ul>
+                                            <li class="select_list">옵션1</li>
+                                            <li class="select_list">옵션1</li>
+                                            <li class="select_list">옵션1</li>
+                                        </ul>
+                                        <div class="alert_box">
+                                            거주국가 기준으로 선택 권장
+                                        </div>
+                                    </div>
+                                    <button type="button" class="basic_btn_red_border getNum_btn">
+                                        인증번호 받기
+                                    </button>
+                                    <div class="input_wrap">
+                                        <input type="text" placeholder="인증번호 입력">
+                                    </div>
+                                    <p class="error_txt">
+                                        인증번호가 일치하지 않습니다. 다시 시도해주세요.
+                                    </p>
+                                    <p class="complete_txt">
+                                        인증이 완료되었습니다.
+                                    </p>
+                                    <button type="button" class="basic_btn_black chkNum_btn">
+                                        인증하기
+                                    </button>
+                                </div>
+                                <!-- 동의 -->
+                                <div class="agree_box">
+                                    <div class="check_box top">
+                                        <input type="checkbox" id="all_check" checked/>
+                                        <label for="all_check">
+                                            <span class="check_box_img"></span>
+                                            <span class="check_box_text">전체 동의</span>
+                                        </label>
+                                    </div>
+                                    <ul class="check_list">
+                                        <li class="list">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check_1" checked/>
+                                                <label for="check_1">
+                                                    <span class="check_box_img"></span>
+                                                </label>
+                                            </div>
+                                            <p>
+                                                <span class="red">(필수)</span>통합계정 가입 동의
+                                            </p>
+                                        </li>
+                                        <li class="list">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check_2" checked/>
+                                                <label for="check_2">
+                                                    <span class="check_box_img"></span>
+                                                </label>
+                                            </div>
+                                            <p>
+                                                <span class="red">(필수)</span>만 14세 이상입니다.
+                                            </p>
+                                        </li>
+                                        <li class="list">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check_3" checked/>
+                                                <label for="check_3">
+                                                    <span class="check_box_img"></span>
+                                                </label>
+                                            </div>
+                                            <p class="open_pop term">
+                                                <span class="red">(필수)</span>이용약관
+                                            </p>
+                                        </li>
+                                        <li class="list">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check_4" checked/>
+                                                <label for="check_4">
+                                                    <span class="check_box_img"></span>
+                                                </label>
+                                            </div>
+                                            <p class="open_pop policy">
+                                                <span class="red">(필수)</span>개인정보수집 및 이용동의
+                                            </p>
+                                        </li>
+                                        <li class="list">
+                                            <div class="check_box">
+                                                <input type="checkbox" id="check_5" checked/>
+                                                <label for="check_5">
+                                                    <span class="check_box_img"></span>
+                                                </label>
+                                            </div>
+                                            <p class="open_pop term">
+                                                <span>(선택)</span>마케팅 정보 수신 동의
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="last_comment">
+                                    회원가입 시, 통합 계정으로 비트썸원이 제공하는 서비스를 모두 이용하실 수 있습니다.
+                                </p>
+                                <button type="button" class="complete_btn full_btn">
+                                    완료
+                                </button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 푸터 -->
+        <footer>
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="../index.html" class="link"></a>
+                </h1>
+                <div class="right_side">
+                    <div class="content_area">
+                        <div class="cover">
+                            <ul class="foot_gnb">
+                                <li class="list">
+                                    <a href="#" onclick="return false;" class="link">
+                                        About Beat Someone
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#" onclick="return false;" class="link">
+                                        이용약관
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#" onclick="return false;" class="link">
+                                        개인정보 취급방침
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#" onclick="return false;" class="link">
+                                        공지사항
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <a href="#" onclick="return false;" class="link">
+                                        제휴 문의
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <address>
+                            <p>
+                                본사 : 서울특별시 도봉구 마들로13길 84, 서울창업허브 창동 2층
+                                8로(창동, 창동 아우르네)
+                            </p>
+                            <p>
+                                지점&스튜디오 : 서울특별시 마포구 와우산로3길 16,
+                                203호~205호(상수동, 석진스토리)
+                            </p>
+                            <p>
+                                대표이사: 김용환&ensp;&ensp;사업자등록번호:
+                                112-86-01117&ensp;&ensp;<br class="mobile_layout" />통신판매신고번호: 제2019-서울마포-2779호
+                            </p>
+                            <p>
+                                TEL : 070-4323-0000&ensp;&ensp;<br class="mobile_layout" />EMAIL :
+                                support@beatsomeone.com
+                            </p>
+                        </address>
+                        <p class="copyright">
+                            Copyright © 2022 BEAT SOMEONE. All rights reserved.
+                        </p>
+                    </div>
+                    <ul class="sns_wrap">
+                        <li class="icon_box insta"></li>
+                        <li class="icon_box twitter"></li>
+                        <li class="icon_box facebook"></li>
+                        <li class="icon_box youtube"></li>
+                        <li class="icon_box blog"></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="../../js/modalElement.js"></script>
+        <bybeats-modal></bybeats-modal>
+    </div>
+</body>
+
+</html>

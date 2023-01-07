@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEAT SOMEONE</title>
+
+    <!-- link -->
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/modal.css" />
+    <style>
+        /* modal.css 에 추가해주세요 */
+        /* 팝업용 모달 */
+        .popup_modal .modal_box_wrap {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 450px;
+            transform: translate(-50%, -50%);
+        }
+
+        .popup_modal .modal_box {
+            position: initial;
+            transform: unset;
+        }
+
+        .popup_modal .check_area {
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transform: translateY(100%);
+            color: #fff;
+        }
+
+        .popup_modal .close_btn {
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            flex-shrink: 0;
+            font-weight: 700;
+            transform: translateY(100%);
+            color: #fff;
+        }
+
+        .popup_modal .check_box .check_box_text {
+            color: #fff;
+        }
+
+        .popup_modal .check_box>input:checked+label .check_box_text {
+            color: #fff;
+        }
+
+        @media screen and (max-width: 1300px) {
+
+            /* 팝업용 모달 */
+            .popup_modal .modal_box_wrap {
+                min-width: calc(100vw * (450 / 1300));
+            }
+
+            .popup_modal .check_area {
+                bottom: calc(100vw * (-10 / 1300));
+            }
+
+            .popup_modal .close_btn {
+                bottom: calc(100vw * (-10 / 1300));
+            }
+        }
+
+        @media all and (max-width: 768px) {
+
+            /* 팝업용 모달 */
+            .popup_modal .modal_box_wrap {
+                min-width: calc(100vw * (396 / 428));
+            }
+
+            .popup_modal .check_area {
+                bottom: calc(100vw * (-10 / 428));
+            }
+
+            .popup_modal .close_btn {
+                bottom: calc(100vw * (-10 / 428));
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 파일등록 완료 모달창 -->
+    <div class="modal_wrap message_modal popup_modal" style="display: block;">
+        <div class="modal_box_wrap">
+            <div class="modal_box">
+                <p class="comment">내용</p>
+            </div>
+            <button type="button" class="close_btn">닫기</button>
+            <div class="check_box check_area">
+                <input type="checkbox" id="dontshow" />
+                <label for="dontshow">
+                    <span class="check_box_img"></span>
+                    <span class="check_box_text">오늘 하루 그만보기</span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
